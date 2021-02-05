@@ -1,7 +1,7 @@
 /**
  * 
  */
-package repositorioBase;
+package default_Package;
 
 /**
  * @author Miguel A. Sastre
