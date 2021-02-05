@@ -18,7 +18,7 @@ public class Ejercicio6 {
 	public static void main() {
 		int numero = Integer.parseInt(JOptionPane.showInputDialog("Dame un número y te digo cuantas cifras tiene."));
 		System.out.println(numero);
-		JOptionPane.showMessageDialog(null, "El número dado tiene " + contarCifras(numero));
+		JOptionPane.showMessageDialog(null, "El número dado tiene " + contarCifras(numero) + " cifras.");
 	}
 
 }

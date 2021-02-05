@@ -13,26 +13,11 @@ public class Ejercicio8 {
 	 * 
 	 */
 
-	public static double esNumero(String strNum) {
-		double auxNum;
-
-		if (strNum == null)
-			auxNum = 0;
-		else
-			try {
-				auxNum = Double.parseDouble(strNum);
-			} catch (NumberFormatException e) {
-				auxNum = 0;
-			}
-
-		return auxNum;
-	}
-
 	static double[] introducirValores() {
 		double arrayNum[] = new double[10];
 
 		for (int i = 0; i < 10; i++) {
-			arrayNum[i] = esNumero(JOptionPane.showInputDialog("Faltan " + (10 - i) + " números por introducir"));
+			arrayNum[i] = MainAPP.esNumeroDouble(JOptionPane.showInputDialog("Faltan " + (10 - i) + " números por introducir"));
 		}
 
 		return arrayNum;

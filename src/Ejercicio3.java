@@ -13,25 +13,10 @@ public class Ejercicio3 {
 	 * divisible entre 5, sin embargo, 17 si es primo.
 	 */
 	
-	static boolean esPrimo(int num) {
-		int punt = 2;
-		boolean esPrimo = true;
-		
-		if(punt < num)
-			do {
-				esPrimo = (((Math.abs(num))%punt) == 0) ? false: true;
-				punt++;
-			} while (esPrimo && (punt < num));	
-		else if (num == 0 || num == 1)
-			esPrimo = false;
-		
-		return esPrimo;
-	}
-	
 	public static void main() {
 		int numPrimo =  Integer.parseInt(JOptionPane.showInputDialog("Dame un número y te digo si es primo(Debe ser un nº entero)"));
-		
-		if(esPrimo(numPrimo))
+
+		if(MainAPP.esPrimo(numPrimo))
 			JOptionPane.showMessageDialog(null, numPrimo + " es un número primo");
 		else
 			JOptionPane.showMessageDialog(null, numPrimo + " NO es un número primo");

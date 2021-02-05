@@ -40,7 +40,7 @@ public class Ejercicio10 {
 		for (int i = 0; i < size; i++) {
 			do {
 				arrayNum[i] = numRandom.nextInt(rangoSup - rangoInf) + rangoInf;
-			} while (!esPrimo(arrayNum[i]));	
+			} while (!MainAPP.esPrimo(arrayNum[i]));	
 		}
 
 		
@@ -48,28 +48,6 @@ public class Ejercicio10 {
 	}
 
 	
-	
-	static boolean esPrimo(int num) {
-		int punt = 2;
-		boolean esPrimo = true;
-		
-		if(punt < num)
-			do {
-				esPrimo = (((Math.abs(num))%punt) == 0) ? false: true;
-				punt++;
-			} while (esPrimo && (punt < num));	
-		else if (num == 0 || num == 1)
-			esPrimo = false;
-		
-		return esPrimo;
-	}
-	
-	static void mostrarArray(int[] array) {
-		
-		for (int i = 0; i < array.length; i++) {
-			System.out.println("Posición " + i + ": " + array[i]);
-		}
-	}
 	
 	static void mayorNumero(int[] array) {
 		int mayor = array[0];
@@ -84,8 +62,8 @@ public class Ejercicio10 {
 	public static void main() {
 		boolean rangoValido = false;
 		JOptionPane.showMessageDialog(null, "Aviso: Este ejercicio muestra resultados por consola");
-		int rangoInf, rangoSup,sizeArray = esNumero(JOptionPane.showInputDialog("Introduce el tamaño deseado para el array"));
-	
+		int rangoInf, rangoSup,sizeArray = Math.abs(MainAPP.esNumeroInt(JOptionPane.showInputDialog("Introduce el tamaño deseado para el array")));
+		int arrayRandom[];
 		// Hay que comprobar que el rango sea valido.
 		JOptionPane.showMessageDialog(null, "Introduzca un rango para los números aleatorios");
 		
@@ -97,13 +75,12 @@ public class Ejercicio10 {
 				rangoValido = true;
 				
 			}else
-				JOptionPane.showMessageDialog(null, "Rango introducido incorrecto. b > a ");
-				
+				JOptionPane.showMessageDialog(null, "Rango introducido incorrecto. b > a ");	
 		} while (!rangoValido);
 
-		
-		mostrarArray(generarArrayNumRandom(rangoInf, rangoSup,sizeArray));
-		mayorNumero(generarArrayNumRandom(rangoInf, rangoSup,sizeArray));
+		arrayRandom = generarArrayNumRandom(rangoInf, rangoSup,sizeArray);
+		MainAPP.mostrarArray(arrayRandom);
+		mayorNumero(arrayRandom);
 	}
 
 }

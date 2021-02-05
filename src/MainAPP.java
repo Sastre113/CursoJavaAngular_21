@@ -20,6 +20,67 @@ public class MainAPP {
 		return options;
 	}
 
+	public static int esNumeroInt(String strNum) {
+		int auxNum;
+
+		if (strNum == null) {
+			auxNum = 1;
+			System.err.println(strNum + " no es número valido, se usará 1.");
+		}		
+		else
+			try {
+				auxNum = Integer.parseInt(strNum);
+			} catch (NumberFormatException e) {
+				System.err.println(strNum + " no es número valido, se usará 1.");
+				auxNum = 1;
+			}
+
+		return auxNum;
+	}
+
+	public static double esNumeroDouble(String strNum) {
+		double auxNum;
+
+		if (strNum == null) {
+			auxNum = 1.0;
+			System.err.println(strNum + " no es número valido, se usará 1.");
+		}
+			
+		else
+			try {
+				auxNum = Double.parseDouble(strNum);
+			} catch (NumberFormatException e) {
+				System.err.println(strNum + " no es número valido, se usará 1.");
+				auxNum = 1.0;
+			}
+
+		return auxNum;
+	}
+	
+	static void mostrarArray(int[] array) {
+		
+		for (int i = 0; i < array.length; i++) {
+			System.out.println("Posición " + i + ": " + array[i]);
+		}
+	}
+	
+	static boolean esPrimo(int num) {
+		int punt = 2;
+		boolean esPrimo = true;
+		num = Math.abs(num);
+		
+		
+		if(punt < num)
+			do {
+				esPrimo = ((num%punt) == 0) ? false: true;
+				punt++;
+			} while (esPrimo && (punt < num));	
+		else if (num == 0 || num == 1)
+			esPrimo = false;
+		
+		return esPrimo;
+	}
+
 	public static void main(String[] args) {
 
 		String todasOpciones[] = autoGenerarOpciones(12);
@@ -30,7 +91,7 @@ public class MainAPP {
 
 			if (opcion != null) {
 				int opcionElegida = Integer.parseInt(opcion.toString().substring(10, 12));
-				System.out.println("Opcion elegida "+ opcionElegida);
+				System.out.println("Opcion elegida " + opcionElegida);
 
 				switch (opcionElegida) {
 				case 1:
@@ -69,13 +130,10 @@ public class MainAPP {
 				case 12:
 					Ejercicio12.main();
 					break;
-				default:
-					System.out.println(opcionElegida);
-					break;
 				}
 			} else
 				exit = true;
-			
+
 		} while (!exit);
 
 	}

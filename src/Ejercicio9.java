@@ -17,26 +17,10 @@ public class Ejercicio9 {
 	 * mostrar el contenido y la suma del array.
 	 */
 
-	public static int esNumero(String strNum) {
-		int auxNum;
-
-		if (strNum == null)
-			auxNum = 1;
-		else
-			try {
-				auxNum = Integer.parseInt(strNum);
-			} catch (NumberFormatException e) {
-				auxNum = 1;
-			}
-
-		return auxNum;
-	}
 
 	static int[] introducirValores(int size) {
 		Random numRandom = new Random();
-		int arrayNum[] = new int[size];
-		
-		
+		int arrayNum[] = new int[size];	
 		
 		for (int i = 0; i < size; i++) {
 			arrayNum[i] = numRandom.nextInt(9);
@@ -47,6 +31,7 @@ public class Ejercicio9 {
 
 	static void mostrarArray(int[] array) {
 		int sum = 0;
+		System.out.println("El contenido del array:");
 		for (int i = 0; i < array.length; i++) {
 			System.out.println("Posición " + i + ": " + array[i]);
 			sum = sum + array[i];
@@ -57,7 +42,7 @@ public class Ejercicio9 {
 
 	public static void main() {
 		JOptionPane.showMessageDialog(null, "Aviso: Este ejercicio muestra resultados por consola");
-		int sizeArray = esNumero(JOptionPane.showInputDialog("Introduce el tamaño deseado para el array"));
+		int sizeArray = Math.abs(MainAPP.esNumeroInt(JOptionPane.showInputDialog("Introduce el tamaño deseado para el array")));
 		mostrarArray(introducirValores(sizeArray));
 
 	}

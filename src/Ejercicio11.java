@@ -25,10 +25,8 @@ public class Ejercicio11 {
 
 	public static void main() {
 		JOptionPane.showMessageDialog(null, "Aviso: Este ejercicio muestra resultados por consola");
-		// Voy a reutilizar los metodos auxiliares de ejercicios anteriores.
-		int sizeArray = Ejercicio10
-				.esNumero(JOptionPane.showInputDialog("Introduce el tamaño deseado para el array"));
-
+		
+		int sizeArray = Math.abs(MainAPP.esNumeroInt(JOptionPane.showInputDialog("Introduce el tamaño deseado para el array")));
 		int array1[] = Ejercicio10.generarArrayNumRandom(1, 100, sizeArray);
 		int array2[] = array1; // ¿El ejercicio pide apuntar por referencia a otro array?
 
@@ -36,11 +34,11 @@ public class Ejercicio11 {
 
 		int newArray[] = proArray(array1, array2);
 		System.out.println("Array1");
-		Ejercicio10.mostrarArray(array1);
+		MainAPP.mostrarArray(array1);
 		System.out.println("Array2");
-		Ejercicio10.mostrarArray(array2);
+		MainAPP.mostrarArray(array2);
 		System.out.println("Nuevo Array");
-		Ejercicio10.mostrarArray(newArray);
+		MainAPP.mostrarArray(newArray);
 	}
 
 }
