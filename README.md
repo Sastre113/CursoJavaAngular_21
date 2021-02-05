@@ -1,6 +1,5 @@
-# Ejercicios UD5
+# Ejercicios UD6
 
-Todos los ejercicios estan en la misma clase. Se despliega un menú por consola para ejecutar
-de manera independiente cada ejercicio.
+MainAPP despliega un menú con todos los ejercicios correspondientes a la tarea 6.
 
-Algunos ejercicios se ejecutan en las consola y otros funcionan mediante un "popup".
+Cada ejercicio ha sido implementado en clases distintas.
