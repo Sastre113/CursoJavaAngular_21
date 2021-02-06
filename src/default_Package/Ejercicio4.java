@@ -2,14 +2,13 @@ package default_Package;
 
 public class Ejercicio4 {
 	/*
-	 * 1) Crea una aplicación que calcule la nota media de los alumnos
-	 * pertenecientes al curso de programación. Una vez calculada la nota media se
-	 * guardara esta información en un diccionario de datos que almacene la nota
-	 * media de cada alumno. Todos estos datos se han de proporcionar por pantalla
+	 * 4) Combina los métodos generados en las actividades 2 y 3 creando una
+	 * aplicación que gestione ventas y control de stock en una misma interfaz.
+	 * Utiliza para ello las estructuras de datos que creas conveniente.
 	 */
-	
+
 	public static void main() {
-		
+
 	}
 
 }

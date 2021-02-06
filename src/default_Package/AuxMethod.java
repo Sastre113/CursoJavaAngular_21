@@ -4,12 +4,12 @@ import javax.swing.JOptionPane;
 
 public class AuxMethod {
 	
-	static void menu(int numEjercicios) {
+	static void menu(int numEjercicios, String textoSeleccion, String textoTitulo) {
 
 		String todasOpciones[] = autoGenerarOpciones(numEjercicios);
 		boolean exit = false;
 		do {
-			Object opcion = JOptionPane.showInputDialog(null, "Selecciona un ejercicio de la UD7", "UD7",
+			Object opcion = JOptionPane.showInputDialog(null,textoSeleccion , textoTitulo ,
 					JOptionPane.QUESTION_MESSAGE, null, todasOpciones, todasOpciones[0]);
 
 			if (opcion != null) {
@@ -78,6 +78,14 @@ public class AuxMethod {
 		return Integer.parseInt(strNum);
 	}
 	
+	static double solicitarDatosDouble(String texto) {
+		String strNum = "";
+		do {
+			strNum = JOptionPane.showInputDialog(texto);
+		} while (!esNumero(strNum));
+		return Double.parseDouble(strNum);
+	}
+	
 	static void mostrarInfo(String text) {
 		JOptionPane.showMessageDialog(null, text);
 	}
@@ -86,6 +94,19 @@ public class AuxMethod {
 		int opcion = JOptionPane.showOptionDialog(
 				   null,
 				   "Eliga una opcion", 
+				   "Selector de opciones",
+				   JOptionPane.YES_NO_CANCEL_OPTION,
+				   JOptionPane.QUESTION_MESSAGE,
+				   null, 
+				   opciones,   
+				   opciones[0]);
+		return opcion;
+	}
+	
+	static int darOpciones(String [] opciones, String textoOpciones) {
+		int opcion = JOptionPane.showOptionDialog(
+				   null,
+				   textoOpciones, 
 				   "Selector de opciones",
 				   JOptionPane.YES_NO_CANCEL_OPTION,
 				   JOptionPane.QUESTION_MESSAGE,

@@ -29,6 +29,7 @@ public class Ejercicio1 {
 		int opcion;
 		boolean exit = false;
 		
+		// Datos de prueba
 		int testNotas [] = {5,8,7};
 		dBNotas.put(0, new Alumno("Alumno 1", testNotas) );
 		dBNotas.put(1, new Alumno("Alumno 2", testNotas) );

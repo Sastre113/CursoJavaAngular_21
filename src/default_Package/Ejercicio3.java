@@ -2,14 +2,16 @@ package default_Package;
 
 public class Ejercicio3 {
 	/*
-	 * 1) Crea una aplicación que calcule la nota media de los alumnos
-	 * pertenecientes al curso de programación. Una vez calculada la nota media se
-	 * guardara esta información en un diccionario de datos que almacene la nota
-	 * media de cada alumno. Todos estos datos se han de proporcionar por pantalla
+	 * 3) Crea una base de datos de 10 artículos para controlar el stock de
+	 * productos de una tienda por medio de un diccionario de datos
+	 * (articulo:precio). El usuario podrá añadir, por medio de interfaz visual
+	 * artículos nuevos y cantidades de estos. El usario podrá consultar la
+	 * información almacenada en el diccionario referente a un articulo concreto e
+	 * incluso listar toda la información en la terminal del programa
 	 */
-	
+
 	public static void main() {
-		
+
 	}
 
 }

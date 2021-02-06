@@ -15,7 +15,7 @@ public class MainApp {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		AuxMethod.menu(4);
+		AuxMethod.menu(4,"Selecciona un ejercicio de la UD7","UD7");
 	}
 
 }
