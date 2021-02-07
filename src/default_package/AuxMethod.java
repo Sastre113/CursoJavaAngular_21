@@ -37,6 +37,12 @@ public class AuxMethod {
 		} while (!exit);
 	}
 	
+	public static Object menuDesplegable(String [] opciones) {
+		Object opcion = JOptionPane.showInputDialog(null, "Selecciona un ejercicio", "Elegir",
+				JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
+		return opcion;
+	}
+	
 	
 	private static String[] autoGenerarOpciones(int size) {
 		String[] options = new String[size];
@@ -116,5 +122,7 @@ public class AuxMethod {
 				   opciones[0]);
 		return opcion;
 	}
+	
+
 
 }

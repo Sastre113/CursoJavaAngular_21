@@ -6,17 +6,12 @@ import java.util.Iterator;
 import java.util.Set;
 
 import default_package.AuxMethod;
-import default_package.Venta;
 
 public class Tienda {
 
 	public static ArrayList<Venta> ventas = new ArrayList<Venta>();
 	public static Hashtable<String, Articulo> stock = new Hashtable<String, Articulo>();
-	
-	public Tienda() {
-		
-	}
-	
+
 	public Tienda(Hashtable<String, Articulo> stock) {
 		this.stock = stock;
 	}
@@ -45,7 +40,7 @@ public class Tienda {
 		return (iva == 0) ? 0.04 : 0.21;
 	}
 
-	public static void gestion() {
+	public void gestion() {
 		int opcion;
 		boolean exit = false;
 		String[] opciones = { "Mostrar stock", "Mostrar ventas", "Añadir stock" };
@@ -91,4 +86,13 @@ public class Tienda {
 
 		} while (!exit);
 	}
+	
+	public ArrayList<Venta> getVentas() {
+		return ventas;
+	}
+
+	public Hashtable<String, Articulo> getStock() {
+		return stock;
+	}
+	
 }

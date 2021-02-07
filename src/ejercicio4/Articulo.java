@@ -2,19 +2,17 @@ package ejercicio4;
 
 public class Articulo {
 
-	private String nombre;
-	private int cantidad;
-	private double precio;
-	private double iva;
-	private double precioConIva;
+	private String nombre; // Nombre del articulo
+	private int cantidad; // Cantidad disponible/Comprada de este producto
+	private double precio; // Precio por unidad
+	private double iva; // Iva aplicado
 	
 	
 	public Articulo(String nombre, int cantidad, double precio, double iva) {
 		this.nombre = nombre;
 		this.cantidad = cantidad;
-		this.precio = precio;
+		this.precio = precio; 
 		this.iva = iva;
-		this.precioConIva = precio * (iva+1);
 	}
 
 	public String getNombre() {
@@ -29,25 +27,35 @@ public class Articulo {
 		return precio;
 	}
 
-	public double getPrecioConIva() {
-		return precioConIva;
-	}
-
 	public double getIva() {
 		return iva;
 	}
 	
-	public void retirarStock(int cantRetirada) {
-		this.cantidad -= cantRetirada;
+	public int retirarStock(int cantRetirada) {
+		int cantidadRetirada = 0;
+		
+		if(this.cantidad < cantRetirada) {
+			cantidadRetirada = this.cantidad;
+			this.cantidad = 0;
+		}else {
+			cantidadRetirada = cantRetirada;
+			this.cantidad -= cantRetirada;
+		}
+			
+		return cantidadRetirada;
 	}
 	
 	public void agregarStock(int cantAgregada) {
 		this.cantidad += cantAgregada;
 	}
 	
+	public double factura() {
+		return (this.getCantidad() * this.getPrecio()) * (1 + this.getIva());
+	}
+	
 	@Override
 	public String toString() {
-		return "\nArticulo: " + this.nombre + "\nCantidad: "+ this.cantidad + "\nPrecio sin iva: "+ 
-				String.format("%1$,.2f €",this.precio)  + "\nIVA aplicado: " + String.format("%1$,.2f",this.iva) + "\nPrecio con IVA: " +  String.format("%1$,.2f €",this.precioConIva) + "\n" ;
+		return "\nArticulo: " + this.nombre + "\nCantidad: "+ this.cantidad + "\nPrecio unitario(Sin IVA): "+ 
+				String.format("%1$,.2f €",this.precio)  + "\nIVA aplicado: " + String.format("%1$,.2f",this.iva) + "\n" ;
 	}
 }
