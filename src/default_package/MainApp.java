@@ -1,7 +1,7 @@
 /**
  * 
  */
-package default_Package;
+package default_package;
 
 import javax.swing.JOptionPane;
 

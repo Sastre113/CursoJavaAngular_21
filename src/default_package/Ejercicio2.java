@@ -1,4 +1,4 @@
-package default_Package;
+package default_package;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -34,7 +34,7 @@ public class Ejercicio2 {
 		int opcion;
 		boolean exit = false;
 		
-		ventas.add(new Venta(4,51.3,60,21));
+		ventas.add(new Venta(4,51.3,70,21));
 		ventas.add(new Venta(12,160,200,4));
 		
 		do {

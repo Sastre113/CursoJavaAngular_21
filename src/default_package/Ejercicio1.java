@@ -1,4 +1,4 @@
-package default_Package;
+package default_package;
 
 import java.util.Hashtable;
 import java.util.Set;

@@ -1,6 +1,7 @@
-package default_Package;
+package default_package;
 
 import javax.swing.JOptionPane;
+import ejercicio4.Ejercicio4;
 
 public class AuxMethod {
 	
@@ -37,7 +38,7 @@ public class AuxMethod {
 	}
 	
 	
-	static private String[] autoGenerarOpciones(int size) {
+	private static String[] autoGenerarOpciones(int size) {
 		String[] options = new String[size];
 
 		for (int i = 0; i < size; i++) {
@@ -51,7 +52,7 @@ public class AuxMethod {
 	}
 	
 
-	static private boolean esNumero(String strNum) {
+	public static boolean esNumero(String strNum) {
 		boolean esNum = true;
 
 		if (strNum == null) 
@@ -66,11 +67,11 @@ public class AuxMethod {
 		return esNum;
 	}
 	
-	static String solicitarDatosString(String texto) {
+	public static String solicitarDatosString(String texto) {
 		return JOptionPane.showInputDialog(texto);
 	}
 	
-	static int solicitarDatosInt(String texto) {
+	public static int solicitarDatosInt(String texto) {
 		String strNum = "";
 		do {
 			strNum = JOptionPane.showInputDialog(texto);
@@ -78,7 +79,7 @@ public class AuxMethod {
 		return Integer.parseInt(strNum);
 	}
 	
-	static double solicitarDatosDouble(String texto) {
+	public static double solicitarDatosDouble(String texto) {
 		String strNum = "";
 		do {
 			strNum = JOptionPane.showInputDialog(texto);
@@ -86,11 +87,11 @@ public class AuxMethod {
 		return Double.parseDouble(strNum);
 	}
 	
-	static void mostrarInfo(String text) {
+	public static void mostrarInfo(String text) {
 		JOptionPane.showMessageDialog(null, text);
 	}
 	
-	static int darOpciones(String [] opciones) {
+	public static int darOpciones(String [] opciones) {
 		int opcion = JOptionPane.showOptionDialog(
 				   null,
 				   "Eliga una opcion", 
@@ -103,7 +104,7 @@ public class AuxMethod {
 		return opcion;
 	}
 	
-	static int darOpciones(String [] opciones, String textoOpciones) {
+	public static int darOpciones(String [] opciones, String textoOpciones) {
 		int opcion = JOptionPane.showOptionDialog(
 				   null,
 				   textoOpciones, 

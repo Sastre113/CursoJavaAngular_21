@@ -1,4 +1,7 @@
-package default_Package;
+package ejercicio4;
+
+import java.util.Hashtable;
+import java.util.List;
 
 public class Venta {
 	/*
@@ -17,22 +20,23 @@ public class Venta {
 	private int cantArticulos;
 	private double iva;
 	private double precioBruto;
-	private double precioNeto;
+	private double precioIVA;
 	private double pagado;
 	private double devolver;
-	
+	private Hashtable<String, Integer> articulos;
 
-	public Venta (int cantArticulos,double precioBruto,double pagado,double porcertanjeIVA) {
+	public Venta (int cantArticulos,Hashtable<String, Integer> articulos,double precioBruto,double pagado,double porcertanjeIVA) {
 		this.cantArticulos = cantArticulos;
+		this.articulos = articulos;
 		this.precioBruto = precioBruto;
-		this.precioNeto = precioBruto *((porcertanjeIVA/100)+1); 
+		this.precioIVA = precioBruto *((porcertanjeIVA/100)+1); 
 		this.pagado = pagado;
-		this.devolver = pagado - precioBruto;
+		this.devolver = pagado - getprecioIVA();
 		this.iva = porcertanjeIVA;
 	}
 
-	public double getPrecioNeto() {
-		return precioNeto;
+	public double getprecioIVA() {
+		return precioIVA;
 	}
 
 	public double getIva() {
@@ -47,7 +51,6 @@ public class Venta {
 		return precioBruto;
 	}
 
-
 	public double getPagado() {
 		return pagado;
 	}
@@ -55,10 +58,17 @@ public class Venta {
 	public double getDevolver() {
 		return devolver;
 	}
+	
+	public void añadirArticulo(String nombreArticulo, int cantArticulo) {
+		if(!articulos.containsKey(nombreArticulo))
+			articulos.put(nombreArticulo, cantArticulo);
+	}
 
+	
+	@Override
 	public String toString() {
-		return "IVA aplicado: " + this.getIva() + "\nPrecio bruto total: "+this.getPrecioBruto()+"\nPrecio con IVA: "
-				+ String.format("%1$,.2f",this.getPrecioNeto()) + "\nNúmero de artículos: " +this.getCantArticulos() + "\nPagado: " + this.pagado
+		return "IVA aplicado: " + this.getIva() + "\nPrecio sin IVA: "+this.getPrecioBruto()+"\nPrecio con IVA: "
+				+ String.format("%1$,.2f",this.getprecioIVA()) + "\nNúmero de artículos: " +this.getCantArticulos() + "\nPagado: " + this.pagado
 				+"\nCambio a devolver: " + String.format("%1$,.2f", this.getDevolver()) + "\n";
 	}
 

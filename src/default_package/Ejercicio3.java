@@ -1,7 +1,8 @@
-package default_Package;
+package default_package;
 
 import java.util.Hashtable;
 import java.util.Set;
+
 
 public class Ejercicio3 {
 	/*
@@ -23,8 +24,11 @@ public class Ejercicio3 {
 			text += articulo + " " + dBArticulos.get(articulo).toString() + " €\n";
 		}
 		
+		
 		AuxMethod.mostrarInfo(text);
 	}
+	
+	
 	
 	static private void cargarDB() {
 		dBArticulos.put("coca cola", 3.0);

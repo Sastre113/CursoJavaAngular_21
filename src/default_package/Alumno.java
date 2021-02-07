@@ -1,4 +1,4 @@
-package default_Package;
+package default_package;
 
 public class Alumno {
 	
