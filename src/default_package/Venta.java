@@ -1,5 +1,9 @@
 package default_package;
 
+/**
+ * @author Miguel A. Sastre
+ *
+ */
 public class Venta {
 	/*
 	 * 2) Crea una aplicación que gestione el flujo de ventas de una caja de

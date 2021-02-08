@@ -4,6 +4,10 @@ import java.util.Hashtable;
 import default_package.AuxMethod;
 
 
+/**
+ * @author Miguel A. Sastre
+ *
+ */
 public class Ejercicio4 {
 	/*
 	 * 4) Combina los métodos generados en las actividades 2 y 3 creando una

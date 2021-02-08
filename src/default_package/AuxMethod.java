@@ -3,6 +3,10 @@ package default_package;
 import javax.swing.JOptionPane;
 import ejercicio4.Ejercicio4;
 
+/**
+ * @author Miguel A. Sastre
+ *
+ */
 public class AuxMethod {
 	
 	static void menu(int numEjercicios, String textoSeleccion, String textoTitulo) {

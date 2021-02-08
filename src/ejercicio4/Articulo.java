@@ -1,5 +1,9 @@
 package ejercicio4;
 
+/**
+ * @author Miguel A. Sastre
+ *
+ */
 public class Articulo {
 
 	private String nombre; // Nombre del articulo

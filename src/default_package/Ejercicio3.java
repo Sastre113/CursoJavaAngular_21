@@ -4,6 +4,10 @@ import java.util.Hashtable;
 import java.util.Set;
 
 
+/**
+ * @author Miguel A. Sastre
+ *
+ */
 public class Ejercicio3 {
 	/*
 	 * 3) Crea una base de datos de 10 artículos para controlar el stock de

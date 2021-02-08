@@ -7,6 +7,10 @@ import java.util.Set;
 
 import default_package.AuxMethod;
 
+/**
+ * @author Miguel A. Sastre
+ *
+ */
 public class Tienda {
 
 	public static ArrayList<Venta> ventas = new ArrayList<Venta>();

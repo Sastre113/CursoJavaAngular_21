@@ -3,6 +3,10 @@ package ejercicio4;
 import java.util.Hashtable;
 import java.util.List;
 
+/**
+ * @author Miguel A. Sastre
+ *
+ */
 public class Venta {
 	
 	private int idVenta;

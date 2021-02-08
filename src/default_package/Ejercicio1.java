@@ -3,6 +3,10 @@ package default_package;
 import java.util.Hashtable;
 import java.util.Set;
 
+/**
+ * @author Miguel A. Sastre
+ *
+ */
 public class Ejercicio1 {
 	/*
 	 * 1) Crea una aplicación que calcule la nota media de los alumnos

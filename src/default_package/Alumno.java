@@ -1,5 +1,9 @@
 package default_package;
 
+/**
+ * @author Miguel A. Sastre
+ *
+ */
 public class Alumno {
 	
 	/*

@@ -3,6 +3,10 @@ package default_package;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * @author Miguel A. Sastre
+ *
+ */
 public class Ejercicio2 {
 	/*
 	 * 2) Crea una aplicación que gestione el flujo de ventas de una caja de
