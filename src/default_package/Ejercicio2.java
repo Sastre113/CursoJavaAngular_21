@@ -33,6 +33,10 @@ public class Ejercicio2 {
 		AuxMethod.mostrarInfo(text);
 	}
 	
+	static private boolean pagoSuficiente(double pago,double iva, double precioBruto) {
+		return (pago - (precioBruto * ((iva/100)+1)) >= 0) ? true:false;
+	}
+	
 	public static void main() {
 		String [] opciones = {"Mostrar ventas","Añadir nueva venta"};
 		int opcion;
@@ -57,8 +61,15 @@ public class Ejercicio2 {
 				int cantArticulos = AuxMethod.solicitarDatosInt("Introducir nº de artículos comprados");
 				double iva = (AuxMethod.darOpciones(ivaOption, "Elija el tipo de IVA") == 0) ? 4:21,
 				precioBruto = AuxMethod.solicitarDatosDouble("Introducir precio bruto de compra"),
-				pagado = AuxMethod.solicitarDatosDouble("Introducir cantidad pagada");
+				pagado;
+				
+				do {
+					pagado = AuxMethod.solicitarDatosDouble("Introducir cantidad pagada.(Pago > " + String.format("%1$,.2f", (precioBruto*((iva/100)+1))));
+				}while(!pagoSuficiente(pagado,iva,precioBruto));
+				
+				
 				ventas.add(new Venta(cantArticulos,precioBruto,pagado,iva));
+				
 				break;
 			default:
 				exit = true;
