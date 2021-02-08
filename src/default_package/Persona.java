@@ -39,15 +39,19 @@ public class Persona {
 	private char sexo;
 	private double peso;
 	private double altura;
+	private final static char HOMBRE = 'H';
 	
 	public Persona() {
-		this("",0,'H',0.0,0.0);
+		this("",0,HOMBRE,0.0,0.0);
 	}
 	
 	public Persona(String nombre, int edad, char sexo) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.sexo = sexo;
+		this.dni = "";
+		this.peso = 0;
+		this.altura = 0;
 	}
 	
 	public Persona(String nombre, int edad, char sexo, double peso,double altura) {
@@ -115,4 +119,8 @@ public class Persona {
 		this.altura = altura;
 	}
 	
+	@Override
+	public String toString() {
+		return "Nombre: " + this.nombre + "\nEdad: " + this.edad + "\nSexo: " + this.sexo + "\nDNI: " + this.dni + "\nPeso: " + this.peso + "\nAltura: " + this.altura;
+	}
 }

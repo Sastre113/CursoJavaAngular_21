@@ -3,6 +3,8 @@
  */
 package default_package;
 
+import java.util.Random;
+
 /**
  * @author Miguel A. Sastre
  *
@@ -21,4 +23,28 @@ package default_package;
 public class Password {
 	
 	
+	private double contraseña;
+	private int longitud;
+	private static final int DEFAULT_LENGTH = 8;
+	
+	public Password() {
+		this(DEFAULT_LENGTH);
+	}
+	
+	/**
+	 * @param longitud
+	 */
+	public Password(int longitud) {
+		super();
+		this.longitud = longitud;
+		this.contraseña = this.passwordGenerator(longitud);
+	}
+	
+	/**
+	 * @param size
+	 * @return random password
+	 */
+	private double passwordGenerator(double size) {
+		return new Random().nextDouble() * Math.pow(10, longitud-1);
+	}
 }
