@@ -183,12 +183,12 @@ static private boolean pagoSuficiente(double pago,double iva, double precioBruto
 #### Venta.java
 ##### Atributos
 ```java
-	private int cantArticulos
-	private double iva
-	private double precioBruto
-	private double precioIVA
-	private double pagado
-	private double devolver
+private int cantArticulos
+private double iva
+private double precioBruto
+private double precioIVA
+private double pagado
+private double devolver
 ```
 ##### Métodos
 ```java
