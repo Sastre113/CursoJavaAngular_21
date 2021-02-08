@@ -6,7 +6,7 @@
 
 ### 1. Descripción
 
-##### UD8 - 
+##### UD8 - Programación orientada a objectos.
  - ##### Ejercicio 1
  ```
 Haz una clase llamada Persona que siga las siguientes condiciones: 
