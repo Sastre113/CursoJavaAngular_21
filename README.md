@@ -29,7 +29,7 @@
 
 ### 2. Organización del código
 - src
-	- default_package
+	- ejercicio1
 		- MainApp.java
 		- Electrodomestico.java
 		- Serie.java

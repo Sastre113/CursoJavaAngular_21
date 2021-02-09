@@ -1,7 +1,7 @@
 /**
  * 
  */
-package default_package;
+package ejercicio2;
 
 /**
  * @author Miguel A. Sastre
@@ -18,19 +18,29 @@ package default_package;
  * 		o Un constructor con el titulo y creador. El resto por defecto. 
  * 		o Un constructor con todos los atributos, excepto de entregado.
  */
-public class Serie {
+public class Serie implements Entregable {
 
-	private String titulo;
-	private int totalTemporadas;
-	private boolean entregado;
-	private String genero;
-	private String creador;
+	/**
+	 * Constantes
+	 */
 	
 	private static final String DEFAULT_TITULO = "";
 	private static final int DEFAULT_TOTAL_TEMPORADAS = 3;
 	private static final boolean DEFAULT_ENTREGADO = false;
 	private static final String DEFAULT_GENERO = "";
 	private static final String DEFAULT_CREADOR = "";
+	
+	/**
+	 * Atributos
+	 */
+	
+	protected String titulo;
+	protected int totalTemporadas;
+	protected boolean entregado;
+	protected String genero;
+	private String creador;
+	
+	
 	
 	
 	/**
@@ -90,20 +100,6 @@ public class Serie {
 		this.totalTemporadas = totalTemporadas;
 	}
 
-
-
-	public boolean isEntregado() {
-		return entregado;
-	}
-
-
-
-	public void setEntregado(boolean entregado) {
-		this.entregado = entregado;
-	}
-
-
-
 	public String getGenero() {
 		return genero;
 	}
@@ -127,10 +123,43 @@ public class Serie {
 	}
 
 
+	@Override
+	public void entregar() {
+		this.entregado = true;
+	}
 
+
+
+	@Override
+	public void devolver() {
+		this.entregado = false;
+	}
+
+
+
+	@Override
+	public boolean isEntregado() {
+		return this.entregado;
+	}
+
+
+
+	@Override
+	public int compareTo(Object a) {
+		int compare = 0;
+		
+		if((int) a > this.getTotalTemporadas())
+			compare = 1;
+		else if((int) a < this.getTotalTemporadas())
+			compare = -1;
+		
+		return compare;
+	}
+	
 	@Override
 	public String toString() {
 		return "Serie [titulo=" + titulo + ", totalTemporadas=" + totalTemporadas + ", entregado=" + entregado
 				+ ", genero=" + genero + ", creador=" + creador + "]";
 	}
+
 }

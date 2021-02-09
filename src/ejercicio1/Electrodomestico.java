@@ -1,7 +1,7 @@
 /**
  * 
  */
-package default_package;
+package ejercicio1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -64,10 +64,7 @@ public class Electrodomestico {
 		this(DEFAULT_PRECIOBASE, DEFAULT_COLOR, DEFAULT_CONSUMO, DEFAULT_PESO);
 	}
 
-	/**
-	 * @param precioBase
-	 * @param peso
-	 */
+
 	public Electrodomestico(double precioBase, double peso) {
 		this.precioBase = precioBase;
 		this.peso = peso;
@@ -75,16 +72,10 @@ public class Electrodomestico {
 		this.consumoEnergetico = this.DEFAULT_CONSUMO;
 	}
 
-	/**
-	 * @param precioBase
-	 * @param color
-	 * @param consumoEnergetico
-	 * @param peso
-	 */
 	public Electrodomestico(double precioBase, String color, char consumoEnergetico, double peso) {
 		this.precioBase = precioBase;
-		this.color = color;
-		this.consumoEnergetico = consumoEnergetico;
+		this.color = comprobarColor(color);
+		this.consumoEnergetico = comprobarConsumoEnergetico(consumoEnergetico);
 		this.peso = peso;
 	}
 
@@ -101,7 +92,7 @@ public class Electrodomestico {
 	 */
 
 	private String comprobarColor(String color) {
-		return (this.DEFAULT_COLORS.contains(color) == true) ? color : this.DEFAULT_COLOR;
+		return (this.DEFAULT_COLORS.contains(color.toLowerCase()) == true) ? color : this.DEFAULT_COLOR;
 	}
 
 	/*
@@ -115,55 +106,39 @@ public class Electrodomestico {
 		boolean exit = false;
 		
 		while(it.hasNext() && !exit) {
-			Integer key = it.next();	
+			Integer key = it.next();
 			if(this.peso >= key) {
-				sobreCoste += EQV_PESO.get(key);
+				sobreCoste += EQV_PESO.get(key) ;
 				exit = true;
 			}
 			
-		}	
+		}		
 		return sobreCoste + this.precioBase;
 	}
 
 	/*
-	 * Getters & setters
+	 * Getters
 	 */
 
 	public double getPrecioBase() {
 		return precioBase;
 	}
 
-	public void setPrecioBase(double precioBase) {
-		this.precioBase = precioBase;
-	}
-
 	public String getColor() {
 		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
 	}
 
 	public char getConsumoEnergetico() {
 		return consumoEnergetico;
 	}
 
-	public void setConsumoEnergetico(char consumoEnergetico) {
-		this.consumoEnergetico = consumoEnergetico;
-	}
-
 	public double getPeso() {
 		return peso;
 	}
 
-	public void setPeso(double peso) {
-		this.peso = peso;
-	}
-
 	@Override
 	public String toString() {
-		return "Electrodomestico [precioBase=" + precioBase + ", color=" + color + ", consumoEnergetico="
+		return this.getClass().getSimpleName() + "\n[precioBase=" + precioBase + ", color=" + color + ", consumoEnergetico="
 				+ consumoEnergetico + ", peso=" + peso + "]";
 	}
 

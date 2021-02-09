@@ -1,7 +1,7 @@
 /**
  * 
  */
-package default_package;
+package ejercicio1;
 
 /**
  * @author Miguel A. Sastre
@@ -23,30 +23,19 @@ public class Lavadora extends Electrodomestico {
 	protected double carga;
 		
 
-	/**
-	 * 
-	 */
 	public Lavadora() {
 		super();
 		this.carga = this.DEFAULT_CARGAR;
 	}
+	
+	public Lavadora(double carga) {
+		super();
+		this.carga = carga;
+	}
 
-
-	/**
-	 * @param carga
-	 */
 	public Lavadora(double precio,double peso) {
 		super(precio,peso);
 		this.carga = this.DEFAULT_CARGAR;
-	}
-
-
-	/**
-	 * @param carga
-	 */
-	public Lavadora(double carga,double precioBase, String color, char consumoEnergetico, double peso) {
-		super(precioBase,color, consumoEnergetico,peso);
-		this.carga = carga;
 	}
 	
 	public double precioFinal() {
@@ -56,6 +45,11 @@ public class Lavadora extends Electrodomestico {
 
 	public double getCarga() {
 		return carga;
+	}
+
+	@Override
+	public String toString() {
+		return "Lavadora [carga=" + carga + "]";
 	}
 	
 	

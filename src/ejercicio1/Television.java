@@ -1,7 +1,7 @@
 /**
  * 
  */
-package default_package;
+package ejercicio1;
 
 /**
  * @author Miguel A. Sastre
@@ -24,19 +24,12 @@ public class Television extends Electrodomestico {
 	protected boolean tdt;
 	
 	
-	/**
-	 * 
-	 */
 	public Television() {
 		super();
 		this.resolucion = this.DEFAULT_RESOLUCION;
 		this.tdt = this.DEFAULT_TDT;
 	}
 
-
-	/**
-	 * 
-	 */
 	public Television(double precio, double peso) {
 		super(precio,peso);
 		this.resolucion = this.DEFAULT_RESOLUCION;
@@ -44,12 +37,8 @@ public class Television extends Electrodomestico {
 	}
 	
 	
-	/**
-	 * @param resolucion
-	 * @param tdt
-	 */
-	public Television(double resolucion, boolean tdt,double precioBase, String color, char consumoEnergetico, double peso) {
-		super(precioBase,color, consumoEnergetico,peso);
+	public Television(double resolucion, boolean tdt) {
+		super();
 		this.resolucion = resolucion;
 		this.tdt = tdt;
 	}
@@ -73,4 +62,10 @@ public class Television extends Electrodomestico {
 	public boolean isTdt() {
 		return tdt;
 	}
+
+	@Override
+	public String toString() {
+		return "Television [resolucion=" + resolucion + ", tdt=" + tdt + "]";
+	}
+	
 }
