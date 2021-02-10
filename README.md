@@ -22,9 +22,11 @@ Los métodos que implementara serán:
 	• comprobarConsumoEnergetico(char letra) : comprueba que la letra es correcta, sino es correcta usara la letra por defecto. Se invocara al crear el objeto y no sera visible.
 	• comprobarColor(String color) : comprueba que el color es correcto, sino lo es usa el color por defecto. Se invocara al crear el objeto y no sera visible.
 	• precioFinal() : según el consumo energético, aumentara su precio, y según su tamaño, también.
+```
 
 ![image](https://user-images.githubusercontent.com/22893383/107440067-5c3df300-6b33-11eb-861f-f29213528322.png)
 
+```Java
 Crearemos una subclase llamada Lavadora con las siguientes características:
 	• Su atributo es carga , ademas de los atributos heredados.
 	• Por defecto, la carga es de 5 kg. Usa una constante para ello.
