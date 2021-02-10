@@ -31,6 +31,6 @@ public class MainApp {
 		
 		System.out.println(theWitcher.toString());
 		System.out.println(lotr.toString());
-		mayorPaginas(theWitcher,lotr);
+		mayorPaginas(lotr,theWitcher);
 	}
 }
