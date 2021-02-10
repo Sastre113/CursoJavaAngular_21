@@ -14,6 +14,26 @@ public class Libro {
 	protected String autor;
 	protected int numPaginas;
 	
+	/**
+	 * 
+	 */
+	public Libro() {
+		
+	}
+
+	/**
+	 * @param isbn
+	 * @param titulo
+	 * @param autor
+	 * @param numPaginas
+	 */
+	public Libro(int isbn, String titulo, String autor, int numPaginas) {
+		this.isbn = isbn;
+		this.titulo = titulo;
+		this.autor = autor;
+		this.numPaginas = numPaginas;
+	}
+	
 	public int getIsbn() {
 		return isbn;
 	}

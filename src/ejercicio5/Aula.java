@@ -121,5 +121,4 @@ public class Aula {
 	public LinkedList<Alumno> getListaAlumnos() {
 		return listaAlumnos;
 	}
-	
 }

@@ -7,7 +7,6 @@ package ejercicio3;
 
 public class MainApp {
 	
-	
 	private static void mayorPaginas(Libro libro1, Libro libro2) {
 		Libro mayorPaginas;
 		mayorPaginas = (libro1.getNumPaginas() > libro2.getNumPaginas()) ? libro1:libro2;
@@ -16,14 +15,10 @@ public class MainApp {
 	}
 	
 	public static void main(String[] args) {
-		Libro theWitcher = new Libro();
+		Libro theWitcher = new Libro(9781478,"La espada del destino","Andrzej Sapkowski",200);
 		Libro lotr = new Libro();
 		
-		theWitcher.setTitulo("La espada del destino");
-		theWitcher.setIsbn(9781478);
-		theWitcher.setAutor("Andrzej Sapkowski");
-		theWitcher.setNumPaginas(200);
-		
+		// Agregando manualmente los atributos.
 		lotr.setTitulo("La comunidad del anillo");
 		lotr.setIsbn(9780553);
 		lotr.setAutor("J.R.R Tolkien");

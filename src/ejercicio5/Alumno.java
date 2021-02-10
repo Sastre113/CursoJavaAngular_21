@@ -36,5 +36,4 @@ public class Alumno extends Persona {
 	public boolean estaPresente() {
 		return new Random().nextBoolean();
 	}
-
 }
