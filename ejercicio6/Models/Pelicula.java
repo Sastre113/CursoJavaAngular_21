@@ -25,6 +25,11 @@ public class Pelicula {
 		this.minEdad = minEdad;
 		this.director = director;
 	}
+	
+	/**
+	 * Métodos "Getters"
+	 */
+	
 	public String getTitulo() {
 		return titulo;
 	}

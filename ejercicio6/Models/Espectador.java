@@ -19,7 +19,11 @@ public class Espectador extends Persona {
 		super(nombre, edad);
 		this.dinero = dinero;
 	}
-
+	
+	/**
+	 * Métodos "Getters"
+	 */
+	
 	public double getDinero() {
 		return dinero;
 	}
