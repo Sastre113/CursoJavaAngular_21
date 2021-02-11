@@ -6,6 +6,7 @@ package Main;
 import java.util.LinkedList;
 import java.util.Random;
 
+import javax.swing.JOptionPane;
 
 import Models.Cine;
 import Models.Espectador;
@@ -16,6 +17,46 @@ import Models.Pelicula;
  *
  */
 public class Test {
+	
+	static void menu() {
+
+		String todasOpciones[] = autoGenerarOpciones(2);
+		boolean exit = false;
+		do {
+			Object opcion = JOptionPane.showInputDialog(null, "Elige que Test quieres realizar" , "Test" ,
+					JOptionPane.QUESTION_MESSAGE, null, todasOpciones, todasOpciones[0]);
+
+			if (opcion != null) {
+				int opcionElegida = Integer.parseInt(opcion.toString().substring(5, 7));
+				System.out.println("Opcion elegida " + opcionElegida);
+
+				switch (opcionElegida) {
+				case 1:
+					test1();
+					break;
+				case 2:
+					test2();
+					break;
+				}
+			} else
+				exit = true;
+
+		} while (!exit);
+	}
+	
+	private static String[] autoGenerarOpciones(int size) {
+		String[] options = new String[size];
+
+		for (int i = 0; i < size; i++) {
+			if (i < 9)
+				options[i] = "Test 0" + (i + 1);
+			else
+				options[i] = "Test " + (i + 1);
+		}
+
+		return options;
+	}
+	
 	
 	public static void test1() {
 		Cine sala1 = new Cine(new Pelicula("Mad Max",2.45,18,"George Miller"), 4.5);

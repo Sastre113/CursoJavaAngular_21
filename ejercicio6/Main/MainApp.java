@@ -11,7 +11,6 @@ import Models.Pelicula;
 
 public class MainApp {	
 	public static void main(String[] args) {
-		Test.test1();
-		Test.test2();
+		Test.menu();
 	}
 }
