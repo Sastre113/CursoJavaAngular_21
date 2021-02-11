@@ -1,8 +1,5 @@
 package Main;
 
-import Models.Cine;
-import Models.Espectador;
-import Models.Pelicula;
 
 /**
  * @author Miguel A. Sastre
@@ -14,3 +11,4 @@ public class MainApp {
 		Test.menu();
 	}
 }
+1
