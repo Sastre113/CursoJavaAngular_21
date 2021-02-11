@@ -1,7 +1,7 @@
 /**
  * 
  */
-package default_Package;
+package Main;
 
 /**
  * @author Miguel A. Sastre
