@@ -11,4 +11,3 @@ public class MainApp {
 		Test.menu();
 	}
 }
-1
