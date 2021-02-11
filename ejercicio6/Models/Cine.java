@@ -115,12 +115,12 @@ public class Cine {
 			}
 		}
 		else
-			System.out.println("El espectador "+ cliente.getNombre() +" no tiene suficiente dinero para entrar en este cine.");
+			System.err.println(" ### El espectador "+ cliente.getNombre() +" no cumple con los requisitos para entrar.");
 	}
 
 	
 	/**
-	 * Sobrecarga del metodo toString(). Devolverá el estado actual del cine
+	 * Sobrecarga del método toString(). Devolverá el estado actual del cine
 	 * indicando la película, su precio, el director y la edad mínima.
 	 * Por último se dibujará el estado de las butacas en el cine.
 	 * Si las butacas están ocupadas se indicará con "XX".
@@ -135,21 +135,26 @@ public class Cine {
 			for(int j = 0; j < this.asientos.get(i).size(); j++) {
 				if(j < this.asientos.get(i).size() - 1) {
 					if(sitioNoOcupado(i,(char)(65 + j))) {
-						sala += (i+1) + Character.toString(65 + j) + " - ";
+						sala += "[ "+ (i+1) + Character.toString(65 + j) + " ] - ";
 					} else
-						sala += "XX -";
+						sala += "[ XX ] - ";
 				} else {
 					if(sitioNoOcupado(i,(char)(65 + j))) {
-						sala += (i+1) + Character.toString(65 + j) + "\n";
+						sala += "[ "+ (i+1) + Character.toString(65 + j) + " ]\n";
 					} else
-						sala += "XX\n";
+						sala += "[ XX ]\n";
 				}
 				
 			}
-		}	
+		}
 		
-		return "Cine\nPelicula proyectada= " + this.getPelicula().getTitulo() + " ,precioEntrada= " + this.getPrecioEntrada() +" €"
-			+"\nDirector: "+ this.getPelicula().getDirector() +"\nEdad minima: "+ this.getPelicula().getMinEdad() + " \n\n" + sala;
+		sala +="\n\n\n" + " ____________________________________________________________________________ \n" +
+				          "|                                  PANTALLA                                  |\n" +
+				          "|____________________________________________________________________________|";
+		
+		return "\nPelicula proyectada : " + this.getPelicula().getTitulo()+"\nDirector: "+ this.getPelicula().getDirector()  
+				+ "\nPrecio de la entrada : " + this.getPrecioEntrada() +" €"
+			 +"\nEdad minima : "+ this.getPelicula().getMinEdad() + " \n\n" + sala;
 	}
 	
 	
