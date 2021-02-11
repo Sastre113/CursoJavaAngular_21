@@ -18,6 +18,8 @@ la siguiente estructura:
 			- Pair.java
 		- Main
 			- MainApp.java
+		- Models
+			
 
 
 MainApp, será el archivo de inicio.
