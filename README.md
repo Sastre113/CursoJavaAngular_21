@@ -76,8 +76,8 @@ Ahora crea una clase ejecutable que realice lo siguiente:
 	• Ahora, recorre este array y ejecuta el método precioFinal().
 	• Deberás mostrar el precio de cada clase, es decir, el precio de todas las televisiones
 		por un lado, el de las lavadoras por otro y la suma de los Electrodomesticos 
-		(puedes crear objetos Electrodomestico , pero recuerda que Television y Lavadora también 		  
-		son electrodomésticos). Recuerda el uso operador instanceof.
+		(puedes crear objetos Electrodomestico , pero recuerda que Television y Lavadora 
+		también son electrodomésticos). Recuerda el uso operador instanceof.
 
 Por ejemplo, si tenemos un Electrodomestico con un precio final de 300, una lavadora de 200 y
 una televisión de 500, el resultado final sera de 1000 (300+200+500) para electrodomésticos, 
@@ -187,7 +187,8 @@ El aula debe tener un identificador numérico, el número máximo de estudiantes
 destinada ( filosofía o física) Piensa que más atributos necesita.
 
 Un aula para que se pueda dar clase necesita que el profesor esté disponible, que el profesor
-de la materia correspondiente en el aula correspondiente (un profesor de filosofía no puede dar en un aula de matemáticas) y que haya más del 50 de alumnos
+de la materia correspondiente en el aula correspondiente (un profesor de filosofía no puede dar 
+en un aula de matemáticas) y que haya más del 50 de alumnos
 
 El objetivo es crear un aula de alumnos y un profesor y determinar si puede darse clase,
 teniendo en cuenta las condiciones antes dichas.
@@ -273,16 +274,13 @@ Los datos del espectador y la película pueden ser totalmente aleatorios.
 		- Pelicula.java
 		- Persona.java
 
-### 3. Lista con los pasos mínimos que se necesitan para clonar exitosamente el proyecto y echarlo a andar en local.
+### 3. Clonar y ejecutar
 
 ```
 IDE               Eclipse IDE Java Developers
-Core              Java 
-Framework         
-DataBase          
-Virtual           
-SO                
+Core              Java            
 ```
+Para ejecutar los ejercicios debemos arrancar desde "MainApp.java". Cada ejercicio tiene un MainApp independiente
 
 ###### Install
 ```
