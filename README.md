@@ -5,7 +5,7 @@
 
 ### 1. Descripción
 
-##### UD9 - Herencia en JAVA.
+##### UD9 - Herencia en JAVA
  - ##### Ejercicio 1
 ```java
 Crearemos una superclase llamada Electrodomestico con las siguientes características:
