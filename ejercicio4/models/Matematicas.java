@@ -36,10 +36,10 @@ public class Matematicas {
 		return a * b;
 	}
 		
-	public static double division(int denominador, int numerador) {
+	public static double division(int dividendo, int divisor) {
 		int division = 0;
 		try {
-			division = denominador/numerador;
+			division = dividendo/divisor;
 		} catch (ArithmeticException e) {
 			e.getMessage();
 			e.printStackTrace();
