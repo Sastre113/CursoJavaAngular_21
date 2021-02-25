@@ -13,10 +13,10 @@ La estructura de las carpetas no esta decidida, pero debería seguir
 la siguiente estructura:
 
 	- ejercicioX
-		- Auxiliar
+		- auxiliar
 			- AuxMethod.java
 			- Pair.java
-		- Main
+		- main
 			- MainApp.java
 		- Models
 			

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Main;
+package main;
 
 /**
  * @author Miguel A. Sastre
