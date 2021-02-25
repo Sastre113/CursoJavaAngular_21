@@ -8,37 +8,20 @@ import javax.swing.JOptionPane;
 
 public class AuxMethod {
 	
-	static void menu(int numEjercicios, String textoSeleccion, String textoTitulo) {
-
-		String todasOpciones[] = autoGenerarOpciones(numEjercicios);
-		boolean exit = false;
-		do {
-			Object opcion = JOptionPane.showInputDialog(null,textoSeleccion , textoTitulo ,
-					JOptionPane.QUESTION_MESSAGE, null, todasOpciones, todasOpciones[0]);
-
-			if (opcion != null) {
-				int opcionElegida = Integer.parseInt(opcion.toString().substring(10, 12));
-				System.out.println("Opcion elegida " + opcionElegida);
-
-				switch (opcionElegida) {
-				case 1:
-					
-					break;
-				case 2:
-					
-					break;
-				case 3:
-					
-					break;
-				case 4:
-					
-					break;
-				}
-			} else
-				exit = true;
-
-		} while (!exit);
+	public static int menuEjercicios(int numEjercicios, String textoSeleccion, String textoTitulo) {
+		int opcionElegida;
+		String todasOpciones[] = AuxMethod.autoGenerarOpciones(numEjercicios);
+		Object opcion = JOptionPane.showInputDialog(null,textoSeleccion , textoTitulo ,
+				JOptionPane.QUESTION_MESSAGE, null, todasOpciones, todasOpciones[0]);
+		
+		if(opcion == null)
+			opcionElegida = -1;
+		else
+			opcionElegida = Integer.parseInt(opcion.toString().substring(10, 12));
+		
+		return opcionElegida;
 	}
+	
 	
 	public static Object menuDesplegable(String [] opciones) {
 		Object opcion = JOptionPane.showInputDialog(null, "Selecciona un ejercicio", "Elegir",
@@ -47,16 +30,14 @@ public class AuxMethod {
 	}
 	
 	
-	private static String[] autoGenerarOpciones(int size) {
+	public static String[] autoGenerarOpciones(int size) {
 		String[] options = new String[size];
-
 		for (int i = 0; i < size; i++) {
 			if (i < 9)
 				options[i] = "Ejercicio 0" + (i + 1);
 			else
 				options[i] = "Ejercicio " + (i + 1);
 		}
-
 		return options;
 	}
 	

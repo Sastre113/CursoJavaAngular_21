@@ -39,7 +39,7 @@ public class Ejemplo_conexion_mysql {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conexion=DriverManager.getConnection("jdbc:mysql://192.168.1.50:3306/?useTimezone=true&serverTimezone=UTC","USER","PASS");//credenciales temporales
+			conexion=DriverManager.getConnection("jdbc:mysql://192.168.1.50:3306/?useTimezone=true&serverTimezone=UTC",USER,PASS);//credenciales temporales
 			System.out.print("Server Connected");
 			fecha();
 			

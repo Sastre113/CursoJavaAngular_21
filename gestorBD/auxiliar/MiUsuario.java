@@ -8,8 +8,9 @@ package auxiliar;
  *
  */
 public class MiUsuario {
-	protected final static String USUARIO = "PRUEBA";
-	protected final static String CONTRASEÑA = "PRUEBA";
+	protected final static String USUARIO = "miguel";
+	protected final static String CONTRASEÑA = "JajaLqZuE6!9";
+	
 	/**
 	 * @return the uSUARIO
 	 */

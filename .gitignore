@@ -91,5 +91,6 @@ hs_err_pid*
 
 
 # Class
-gestorBD/auxiliar/
+auxiliar/
 .MiUsuario
+*MiUsuario
