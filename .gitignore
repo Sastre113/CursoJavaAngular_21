@@ -91,4 +91,5 @@ hs_err_pid*
 
 
 # Class
-./gestorBD/
+gestorBD/auxiliar/
+.MiUsuario.java
