@@ -36,6 +36,16 @@ public class MenuDB {
 			+ "    titulo VARCHAR(30),\n"
 			+ "    gana INT NOT NULL;dni+Curso:cod_curso INT UNIQUE,nombre_curso VARCHAR(100),maximo_alumno INT,"
 			+ "fecha_inicio DATE,fecha_fin DATE,num_horas INT,FK_dni_Profesor CHAR(8) UNIQUE;cod_curso;FK_dni_Profesor|Profesor|dni";
+	private static String prueba4 = "pepe.Profesor:50640549,Miguel,Sastre,Galvez,Una direccion,HaCkEr,100 ";
+	
+	
+	
+	/**
+	 * Método que inserta los datos pasados
+	 * Datos formato --> NombreTabla(Atributo1,..., AtributoN): A1 = valor1,...,valorN  ; ... ; An = valor1,...,valorN + ... + NombreTablaN:...
+	 * 															Siendo Ax, un conjunto de valores que se quiere ingresar.
+	 * @param datos
+	 */
 	
 	public static void iniciar() {
 		miGestor = new GestorDB();
@@ -58,6 +68,9 @@ public class MenuDB {
 					break;
 				case 2:
 					miGestor.crearTablas("pepe",prueba3);
+					break;
+				case 3:
+					miGestor.insertarDatos(prueba4);
 					break;
 				default:
 					miGestor.desconectar();

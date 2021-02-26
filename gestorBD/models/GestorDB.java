@@ -59,6 +59,19 @@ public class GestorDB {
 		}
 	}
 
+	/**
+	 * Método encargado de construir los ejercicios propuestos.
+	 * 
+	 * @param nombreDB
+	 * @param valoresBruto
+	 * @param datos
+	 */
+	public void construirDB(String nombreDB, String valoresBruto, String datos) {
+		this.crearDB(nombreDB);
+		this.crearTablas(nombreDB, valoresBruto);
+		this.insertarDatos(datos);
+	}
+	
 	
 	/**
 	 * 
@@ -149,15 +162,59 @@ public class GestorDB {
 	}
 	
 	
+	/**
+	 * Método que inserta los datos pasados
+	 * Datos formato --> NombreTabla(Atributo1,..., AtributoN): A1 = valor1,...,valorN  ; ... ; An = valor1,...,valorN + ... + NombreTablaN:...
+	 * 															Siendo Ax, un conjunto de valores que se quiere ingresar.
+	 * @param datos
+	 */
+	
+	public void insertarDatos(String datos) {
+		String valores[],conjuntoDatos[], tabla[],tablasSeparadas [] = datos.split("\\+");
+		String query = "";
+		PreparedStatement pst = null;
+		
+		try {
+			for(int i = 0; i < tablasSeparadas.length; i++) {
+				tabla = tablasSeparadas[i].split(":");
+				query += "INSERT INTO " + tabla[0] + " ";
+				conjuntoDatos = tabla[1].split(";");
+				
+				
+				for(int j = 0; j < conjuntoDatos.length; j++) {
+					valores = conjuntoDatos[j].split(",");
+					query += this.parametrosEntrada(valores.length);
+					pst = this.getConexion().prepareStatement(query);
+					
+					for(int k = 0; k < valores.length; k++) {
+						pst.setString(k+1, valores[k]);
+					}
+					pst.executeUpdate();
+				}
+			}
+		} catch (SQLException e) {
+			AuxMethod.mostrarInfo(e.getMessage());
+			e.getStackTrace();
+		}
+	}
+	
+	private String parametrosEntrada(int numParametros) {
+		String query = "VALUES (";
+		
+		for(int i = 0; i < numParametros; i++)
+			query += "?,";
+		
+		return this.eliminarUltimoCaracter(query) + ");";
+	}
+	
+	/**
+	 * Método para eliminar el ultimo carácter de una cadena
+	 * @param cadena
+	 * @return
+	 */
 	private String eliminarUltimoCaracter(String cadena) {
 		return cadena.substring(0, cadena.length()-1);
 	}
-	
-	
-	public void insertarDatos() {
-		
-	}
-	
 	
 	
 	/**
