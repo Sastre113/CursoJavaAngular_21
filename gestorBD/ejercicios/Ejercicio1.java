@@ -24,14 +24,17 @@ public class Ejercicio1 extends EjercicioX {
 	@Override
 	protected String cargarTablas() {
 		return 
-				"fabricantes:CODIGO int NOT NULL AUTO_INCREMENT,\n"
-						+ "  NOMBRE varchar(100) NOT NULL"
-						+ ";CODIGO"
-						+ "+articulos:CODIGO int NOT NULL AUTO_INCREMENT,\n"
-						+ "  			NOMBRE varchar(100) NOT NULL,\n"
-						+ "  			PRECIO decimal(10,0) NOT NULL,\n"
-						+ "  			FABRICANTE int NOT NULL;CODIGO";
-	}
+				"Fabricantes:"
+				+ "	 CODIGO int NOT NULL AUTO_INCREMENT,\n"
+				+ "  NOMBRE varchar(100) NOT NULL"
+				+ ";CODIGO"
+			+ "+Articulos:"
+				+ "CODIGO int NOT NULL AUTO_INCREMENT,\n"
+				+ "NOMBRE varchar(100) NOT NULL,\n"
+				+ "PRECIO decimal(10,0) NOT NULL,\n"
+				+ "FABRICANTE int NOT NULL;CODIGO;"
+				+ "FABRICANTE|Fabricantes|CODIGO";
+		}
 
 	/**
 	 * Método que inserta los datos pasados
@@ -43,7 +46,19 @@ public class Ejercicio1 extends EjercicioX {
 	
 	@Override
 	protected String cargarDatos() {
-		return this.getNombreDB()+".";
+		return 
+				this.getNombreDB()+".Fabricantes(NOMBRE):"
+						+ 			"NVIDIA;"
+						+ 			"AMD;"
+						+ 			"INTEL;"
+						+ 			"ASUS;"
+						+ 			"MSI"
+						+ "+" + this.getNombreDB()+".Articulos(NOMBRE,PRECIO,FABRICANTE):"
+								+ "RTX 2070,600,1;"
+								+ "RX 480,300,2;"
+								+ "ROG POWER,180,3;"
+								+ "K68,150,5;"
+								+ "RTX 3080,900,1";
 	}
 
 }

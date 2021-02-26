@@ -143,8 +143,7 @@ public class GestorDB {
 						case 2:// Caso Foreign key
 							// FK --> Atrib|TablaRefer|AtribRef
 							fk = valores[z].split("\\|");
-							if(z == 0)
-								query += "FOREIGN KEY (" + fk[0] +") REFERENCES " + fk[1] + "(" + fk[2] +")"
+							query += "CONSTRAINT " + fk[0] +" FOREIGN KEY (" + fk[0] +") REFERENCES " + fk[1] + "(" + fk[2] +")"
 										+ " ON DELETE CASCADE ON UPDATE CASCADE," ;
 							break;			
 						}
@@ -156,6 +155,7 @@ public class GestorDB {
 				st.executeUpdate(query);
 			}
 		} catch (SQLException e) {
+			AuxMethod.mostrarInfo(e.getMessage());
 			e.getStackTrace();
 		}
 		
@@ -177,13 +177,14 @@ public class GestorDB {
 		try {
 			for(int i = 0; i < tablasSeparadas.length; i++) {
 				tabla = tablasSeparadas[i].split(":");
-				query += "INSERT INTO " + tabla[0] + " ";
+				query = "INSERT INTO " + tabla[0] + " ";
 				conjuntoDatos = tabla[1].split(";");
 				
 				
 				for(int j = 0; j < conjuntoDatos.length; j++) {
 					valores = conjuntoDatos[j].split(",");
-					query += this.parametrosEntrada(valores.length);
+					if(j == 0)
+						query += this.parametrosEntrada(valores.length);
 					pst = this.getConexion().prepareStatement(query);
 					
 					for(int k = 0; k < valores.length; k++) {

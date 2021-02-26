@@ -2,3 +2,5 @@
 /gestorBD/auxiliar
 .project
 /lib/
+.gitignore
+.settings
