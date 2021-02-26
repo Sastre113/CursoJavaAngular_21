@@ -199,6 +199,13 @@ public class GestorDB {
 		}
 	}
 	
+	/**
+	 * Método que calcula cuantos parametros de entrada se necesitan
+	 * y preparala la query para un preparedStatement.
+	 * @param numParametros
+	 * @return String
+	 */
+	
 	private String parametrosEntrada(int numParametros) {
 		String query = "VALUES (";
 		
