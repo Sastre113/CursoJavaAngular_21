@@ -40,12 +40,6 @@ public class MenuDB {
 	
 	
 	
-	/**
-	 * Método que inserta los datos pasados
-	 * Datos formato --> NombreTabla(Atributo1,..., AtributoN): A1 = valor1,...,valorN  ; ... ; An = valor1,...,valorN + ... + NombreTablaN:...
-	 * 															Siendo Ax, un conjunto de valores que se quiere ingresar.
-	 * @param datos
-	 */
 	
 	public static void iniciar() {
 		miGestor = new GestorDB();
