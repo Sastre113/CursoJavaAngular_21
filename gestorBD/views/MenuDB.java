@@ -13,6 +13,30 @@ import models.GestorDB;
 public class MenuDB {
 	protected static GestorDB miGestor;
 	
+	private static String pruebas = "Profesor:dni CHAR(8) UNIQUE,\n"
+			+ "    nombre VARCHAR(255) UNIQUE,\n"
+			+ "    apellido1 VARCHAR(15) UNIQUE,\n"
+			+ "    apellido2 VARCHAR(15) UNIQUE,\n"
+			+ "    direccion VARCHAR(255),\n"
+			+ "    titulo VARCHAR(30),\n"
+			+ "    gana INT NOT NULL;dni";
+	private static String pruebas2 = "Curso:cod_curso INT UNIQUE,\n"
+			+ "    nombre_curso VARCHAR(100),\n"
+			+ "    maximo_alumno INT,\n"
+			+ "    fecha_inicio DATE,\n"
+			+ "    fecha_fin DATE,\n"
+			+ "    num_horas INT,\n"
+			+ "    FK_dni_Profesor CHAR(8) UNIQUE;cod_curso;FK_dni_Profesor|Profesor|dni";
+	
+	private static String prueba3 = "Profesor:dni CHAR(8) UNIQUE,\n"
+			+ "    nombre VARCHAR(255) UNIQUE,\n"
+			+ "    apellido1 VARCHAR(15) UNIQUE,\n"
+			+ "    apellido2 VARCHAR(15) UNIQUE,\n"
+			+ "    direccion VARCHAR(255),\n"
+			+ "    titulo VARCHAR(30),\n"
+			+ "    gana INT NOT NULL;dni+Curso:cod_curso INT UNIQUE,nombre_curso VARCHAR(100),maximo_alumno INT,"
+			+ "fecha_inicio DATE,fecha_fin DATE,num_horas INT,FK_dni_Profesor CHAR(8) UNIQUE;cod_curso;FK_dni_Profesor|Profesor|dni";
+	
 	public static void iniciar() {
 		miGestor = new GestorDB();
 		int opcion = -1, intentos = 0;
@@ -30,11 +54,16 @@ public class MenuDB {
 				opcion = AuxMethod.menuEjercicios(9, "Elige un ejercicio", "Opciones");
 				switch(opcion) {
 				case 1:
+					miGestor.crearDB(AuxMethod.solicitarDatosString("Dame nombre db"));
+					break;
+				case 2:
+					miGestor.crearTablas("pepe",prueba3);
 					break;
 				default:
 					miGestor.desconectar();
 					AuxMethod.mostrarInfo("Desconectado del servidor\n¡Hasta pronto!");
 					exit = true;
+					break;
 				}
 			} else
 				intentos++;
