@@ -1,42 +1,62 @@
-﻿![banerGit](https://user-images.githubusercontent.com/22893383/107159880-121e0b80-6993-11eb-92e3-1efd1d8f4dba.PNG)
+﻿  
+![banerGit](https://user-images.githubusercontent.com/22893383/107159880-121e0b80-6993-11eb-92e3-1efd1d8f4dba.PNG)
 
 # Curso Desarrollo FullStack con Java, Angular & SQL
 
-#### 1. Descripcion
-```
+### 1. Descripción
 
-Este repositorio esta pensando como base para los ejercicios.
-Los ejercicios de cada unidad estan separados por "branch".
+##### UD18 - Conexión Java-MySQL
+ - ##### Descripción de los ejercicios.
+```java
 
-Cada ejercicio se guardará en una carpeta distinta, para mayor orden.
-La estructura de las carpetas no esta decidida, pero debería seguir
-la siguiente estructura:
+Se trata de un ejercicio de conexionado del código Java
+con una base de datos MySQL.
 
-	- ejercicioX
-		- auxiliar
-			- AuxMethod.java
-			- Pair.java
-		- main
-			- MainApp.java
-		- Models
-			
-
-
-MainApp, será el archivo de inicio.
-AuxMethod y Pair, sirven como clases auxiliares. 
-	- AuxMethod tiene métodos para la interacción con el usuario mediante JOptionPane. 
-	- Pair se trata de una clase abstracta.
+La clase GestorDB se encarga de construir una db, con sus tablas e datos iniciales.
+Para ello se le pasa texto plano formateado de una manera concreta para la 
+realización de las querys.
 
 ```
 
-#### 2. Lista con los pasos mínimos que se necesitan para clonar exitosamente el proyecto y echarlo a andar en local.
+
+### 2. Organización del código
+- gestorBD
+	- auxiliar
+		- AuxMethod.java
+		- Pair.java
+	- ejercicios
+		- Ejercicio1.java
+		- Ejercicio2.java
+		- Ejercicio3.java
+		- Ejercicio4.java
+		- Ejercicio5.java
+		- Ejercicio6.java
+		- Ejercicio7.java
+		- Ejercicio8.java
+		- Ejercicio9.java
+	- main
+		- MainApp.java
+	- models
+		- GestorDB.java
+	- views
+		- MenuDB.java
+
+
+### 3. Clonar y ejecutar
 
 ```
 IDE               Eclipse IDE Java Developers
-Core              Java        
+Core              Java            
 ```
+Para ejecutar los ejercicios debemos arrancar desde "MainApp.java". Cada ejercicio tiene un MainApp independiente
+
 
 ###### Install
 ```
 Eclipse    https://www.eclipse.org/downloads/packages/
+```
+
+###### Librerías
+```
+mysql-connector-java-8.0.23.jar
 ```
