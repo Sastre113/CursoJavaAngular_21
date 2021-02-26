@@ -11,7 +11,7 @@ public class Ejercicio9 extends EjercicioX {
 
 	@Override
 	protected String cargarNombreDB() {
-		return "LosCientificos";
+		return "LosInvestigadores";
 	}
 
 	/**
@@ -24,21 +24,31 @@ public class Ejercicio9 extends EjercicioX {
 	@Override
 	protected String cargarTablas() {
 		return 
-			"Proyecto:"
-				+ "Id CHAR(4),"
-				+ "Nombre VARCHAR(255),"
-				+ "Horas INT;"
-				+ "Id"
-			+ "+Cientificos:"
+			"Facultad:"
+				+ "Codigo CHAR(4),"
+				+ "Nombre VARCHAR(100);"
+				+ "Codigo"
+			+ "+Investigadores:"
 				+ "DNI  VARCHAR(8),"
-				+ "NomApels VARCHAR(255);"
-				+ "DNI"
-			+ "+Asignado_A:"
-				+ "FK_Cientificos_DNI VARCHAR(8),"
-				+ "FK_Proyecto_Id CHAR(4);"
-				+ "FK_Cientificos_DNI,FK_Proyecto_Id;"
-				+ "FK_Proyecto_Id|Proyecto|Id,"
-				+ "FK_Cientificos_DNI|Cientificos|DNI";
+				+ "NomApels VARCHAR(255),"
+				+ "FK_Investigadores_Facultad  CHAR(4);"
+				+ "DNI;"
+				+ "FK_Investigadores_Facultad|Facultad|Codigo"
+			+ "+Equipos:"
+				+ "NumSerie CHAR(4),"
+				+ "Nombre VARCHAR(100),"
+				+ "FK_Facultad CHAR(4);"
+				+ "NumSerie;"
+				+ "FK_Facultad|Facultad|Codigo"
+				
+			+ "+Reserva:"
+				+ "FK_Investigadores_DNI VARCHAR(8),"
+				+ "FK_Equipos_NumSerie CHAR(4),"
+				+ "Comienzo DATETIME,"
+				+ "Fin DATETIME;"
+				+ "FK_Investigadores_DNI,FK_Equipos_NumSerie;"
+				+ "FK_Investigadores_DNI|Investigadores|DNI,"
+				+ "FK_Equipos_NumSerie|Equipos|NumSerie";
 	}
 
 	/**
@@ -53,28 +63,36 @@ public class Ejercicio9 extends EjercicioX {
 	protected String cargarDatos() {
 		return 
 				this.getNombreDB()+
-				".Proyecto(Id,Nombre,Horas):"
-						+ "G98M,Manipulador de Campos de Energía Cero,10;"
-						+ "GL23,Quantum Destabilize,50;"
-						+ "OSIP,Overwatch Standard Issue Pulse Rifle,150;"
-						+ "TAU0,XVL1456,520;"
+				".Facultad(Codigo,Nombre):"
+						+ "1,Black Mesa;"
+						+ "2,Manhattan;"
+						+ "3,Woolsthorpe Manor;"
+						+ "4,Oxford;"
+						+ "5,Lambda"
+						+ "+" 
+				+ this.getNombreDB()+
+				".Investigadores(DNI,NomApels,FK_Investigadores_Facultad):"
+						+ "83225367,G-Man,1;"
+						+ "10284470,Gordon Freeman,1;"
+						+ "38444048,Albert Einstein,2;"
+						+ "40219395,Isaac Newton,3;"
+						+ "79260594,Stephen Hawking,5"
+						+ "+" 
+				+ this.getNombreDB()+
+				".Equipos(NumSerie,Nombre,FK_Facultad):"
+						+ "G98M,Manipulador de Campos de Energía Cero,1;"
+						+ "GL23,Quantum Destabilize,1;"
+						+ "OSIP,Overwatch Standard Issue Pulse Rifle,2;"
+						+ "TAU0,XVL1456,3;"
 						+ "BFG5,Fat-man,2"
 						+ "+" 
 				+ this.getNombreDB()+
-				".Cientificos(DNI,NomApels):"
-						+ "83225367,G-Man;"
-						+ "10284470,Gordon Freeman;"
-						+ "38444048,Albert Einstein;"
-						+ "40219395,Isaac Newton;"
-						+ "79260594,Stephen Hawking"
-						+ "+" 
-				+ this.getNombreDB()+
-				".Asignado_A(FK_Cientificos_DNI,FK_Proyecto_Id):"
-						+ "83225367,G98M;"
-						+ "10284470,G98M;"
-						+ "38444048,BFG5;"
-						+ "40219395,TAU0;"
-						+ "79260594,TAU0";
+				".Reserva(FK_Investigadores_DNI,FK_Equipos_NumSerie,Comienzo,Fin ):"
+						+ "10284470,TAU0,2001-01-1,2001-03-30;"
+						+ "38444048,G98M,1993-02-18,2001-01-1;"
+						+ "79260594,BFG5,1945-06-12,2007-01-1;"
+						+ "40219395,OSIP,1993-02-18,2000-02-18;"
+						+ "83225367,GL23,1946-06-12,1993-02-18";
 	}
 
 }
