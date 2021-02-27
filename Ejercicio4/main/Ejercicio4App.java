@@ -3,6 +3,10 @@
  */
 package main;
 
+import java.awt.EventQueue;
+
+import views.Calculadora;
+
 /**
  * @author Miguel A. Sastre
  *
@@ -10,12 +14,18 @@ package main;
 public class Ejercicio4App {
 
 	/**
-	 * @param args
+	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("hola");
-		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Calculadora frame = new Calculadora();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
-
 }
