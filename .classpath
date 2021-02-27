@@ -21,5 +21,7 @@
 	<classpathentry kind="lib" path="H:/Programas/eclipse/plugins/org.eclipse.ui.workbench_3.122.0.v20201122-1345.jar" sourcepath="H:/Programas/eclipse/plugins/org.eclipse.ui.workbench_3.122.0.v20201122-1345.jar"/>
 	<classpathentry kind="lib" path="H:/Programas/eclipse/plugins/com.ibm.icu_67.1.0.v20200706-1749.jar" sourcepath="H:/Programas/eclipse/plugins/com.ibm.icu_67.1.0.v20200706-1749.jar"/>
 	<classpathentry kind="lib" path="H:/Programas/eclipse/plugins/org.eclipse.ui.forms_3.11.0.v20201025-0656.jar" sourcepath="H:/Programas/eclipse/plugins/org.eclipse.ui.forms_3.11.0.v20201025-0656.jar"/>
+	<classpathentry kind="lib" path="jgoodies-forms-1.8.0.jar" sourcepath="jgoodies-forms-1.8.0-sources.jar"/>
+	<classpathentry kind="lib" path="miglayout15-swing.jar" sourcepath="miglayout-src.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

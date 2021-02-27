@@ -3,6 +3,10 @@
  */
 package main;
 
+import java.awt.EventQueue;
+
+import views.Peliculas;
+
 /**
  * @author Miguel A. Sastre
  *
@@ -10,12 +14,19 @@ package main;
 public class Ejercicio2App {
 
 	/**
-	 * @param args
+	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("hola");
-		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Peliculas frame = new Peliculas();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 
 }
