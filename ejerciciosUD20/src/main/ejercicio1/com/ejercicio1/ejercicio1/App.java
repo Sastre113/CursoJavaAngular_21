@@ -1,8 +1,8 @@
-package com.ejercicio.ejercicio1;
+package com.ejercicio1.ejercicio1;
 
 import java.awt.EventQueue;
 
-import com.ejercicio.views.InterfazBasica;
+import com.ejercicio1.views.InterfazBasica;
 
 /**
  * Hello world!

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.ejercicio.views;
+package com.ejercicio1.views;
 
 import java.awt.Font;
 
