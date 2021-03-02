@@ -8,6 +8,7 @@ import java.awt.EventQueue;
 import views.VentanaConInteraccion;
 import views.VentanaConMasInteraccion;
 import views.VentanaConRatonOyente;
+import views.VentanaOyente;
 
 /**
  * @author Miguel A. Sastre
@@ -22,7 +23,7 @@ public class ejercicio4App {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					VentanaConRatonOyente frame = new VentanaConRatonOyente();
+					VentanaOyente frame = new VentanaOyente();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();

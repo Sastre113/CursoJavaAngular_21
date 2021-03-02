@@ -20,6 +20,10 @@ import java.awt.event.MouseWheelListener;
 import java.awt.event.MouseWheelEvent;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowStateListener;
+import java.awt.event.WindowFocusListener;
 
 /**
  * @author Miguel A. Sastre
@@ -36,6 +40,17 @@ public class VentanaOyente extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaOyente() {
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowOpened(WindowEvent e) {
+				textArea.append("Se abre la ventana\n");
+			}
+			@Override
+			public void windowDeactivated(WindowEvent e) {
+				textArea.append("Se cierra la ventana\n");
+			}
+		});
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 686, 300);
 		contentPane = new JPanel();
@@ -51,12 +66,6 @@ public class VentanaOyente extends JFrame {
 			@Override
 			public void componentResized(ComponentEvent e) {
 				textArea.append("Cambio en el tamaño de la ventana\n");
-			}
-		});
-		textArea.addFocusListener(new FocusAdapter() {
-			@Override
-			public void focusGained(FocusEvent e) {
-				textArea.append("Ventana abierta\n");
 			}
 		});
 		textArea.addMouseWheelListener(new MouseWheelListener() {
