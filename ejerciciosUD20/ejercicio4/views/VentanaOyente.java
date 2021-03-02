@@ -43,11 +43,15 @@ public class VentanaOyente extends JFrame {
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowOpened(WindowEvent e) {
-				textArea.append("Se abre la ventana\n");
+				textArea.append("Se inicia la ventana\n");
 			}
 			@Override
 			public void windowDeactivated(WindowEvent e) {
-				textArea.append("Se cierra la ventana\n");
+				textArea.append("Se minimiza la ventana\n");
+			}
+			@Override
+			public void windowActivated(WindowEvent e) {
+				textArea.append("Se abre la ventana\n");
 			}
 		});
 

@@ -1,14 +1,13 @@
-package com.ejercicio1.ejercicio1;
+package main;
 
 import java.awt.EventQueue;
-
-import com.ejercicio1.views.InterfazBasica;
+import views.InterfazBasica;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class ejercicio1App 
 {
 	/**
 	 * Launch the application.

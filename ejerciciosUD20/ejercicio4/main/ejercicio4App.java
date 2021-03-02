@@ -4,10 +4,6 @@
 package main;
 
 import java.awt.EventQueue;
-
-import views.VentanaConInteraccion;
-import views.VentanaConMasInteraccion;
-import views.VentanaConRatonOyente;
 import views.VentanaOyente;
 
 /**

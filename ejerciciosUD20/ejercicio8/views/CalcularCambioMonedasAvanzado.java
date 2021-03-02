@@ -8,6 +8,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -65,12 +66,16 @@ public class CalcularCambioMonedasAvanzado extends JFrame {
 		textFieldResultados.setBounds(338, 20, 86, 20);
 		contentPane.add(textFieldResultados);
 		textFieldResultados.setColumns(10);
+		btnCalcular.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode() == 10)
+					calcularCambio();
+			}
+		});
 		btnCalcular.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-					if(euroAPts)
-						textFieldResultados.setText("" + String.format("%.2f",(Double.valueOf(textFieldCantidadAConvertir.getText()) * 166.386)));
-					else
-						textFieldResultados.setText("" +  String.format("%.2f",(Double.valueOf(textFieldCantidadAConvertir.getText()) / 166.386)));
+					calcularCambio();
 			}
 		});
 		
@@ -81,34 +86,63 @@ public class CalcularCambioMonedasAvanzado extends JFrame {
 		btnCambiarCambio.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
-				System.out.println(e.getID());
+				if(e.getKeyCode() == 10)
+					cambiarCambio();
 			}
 		});
 		btnCambiarCambio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if(euroAPts) {
-					btnCalcular.setText("Pts a €");
-					euroAPts = false;
-				}	
-				else {
-					btnCalcular.setText("€ a pts");
-					euroAPts = true;
-				}
-					
+				cambiarCambio();	
 			}
 		});
 		btnCambiarCambio.setBounds(137, 51, 89, 23);
 		contentPane.add(btnCambiarCambio);
 		
 		JButton btnBorrar = new JButton("Borrar");
+		btnBorrar.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				vaciarTextField();
+			}
+		});
 		btnBorrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textFieldCantidadAConvertir.setText("");
-				textFieldResultados.setText("");
+				vaciarTextField();
 			}
 		});
 		btnBorrar.setBounds(268, 51, 89, 23);
 		contentPane.add(btnBorrar);
 	}
+	
+	public void calcularCambio() {
+		try {
+			if(euroAPts)
+				textFieldResultados.setText(String.format("%.2f",(Double.valueOf(textFieldCantidadAConvertir.getText()) * 166.386)));
+			else
+				textFieldResultados.setText(String.format("%.2f",(Double.valueOf(textFieldCantidadAConvertir.getText()) / 166.386)));
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "No se ha introducido ningún valor");
+		}
+		
+	}
+	
+	public void cambiarCambio() {
+		if(euroAPts) {
+			btnCalcular.setText("Pts a €");
+			euroAPts = false;
+			if(!textFieldCantidadAConvertir.getText().equals(""))
+				calcularCambio();
+		}	
+		else {
+			btnCalcular.setText("€ a pts");
+			euroAPts = true;
+			if(!textFieldCantidadAConvertir.getText().equals(""))
+				calcularCambio();
+		}
+	}
 
+	public void vaciarTextField() {
+		textFieldCantidadAConvertir.setText("");
+		textFieldResultados.setText("");
+	}
 }
