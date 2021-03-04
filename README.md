@@ -1,40 +1,40 @@
-﻿![banerGit](https://user-images.githubusercontent.com/22893383/107159880-121e0b80-6993-11eb-92e3-1efd1d8f4dba.PNG)
+  
+![banerGit](https://user-images.githubusercontent.com/22893383/107159880-121e0b80-6993-11eb-92e3-1efd1d8f4dba.PNG)
 
 # Curso Desarrollo FullStack con Java, Angular & SQL
 
-#### 1. Descripcion
+### 1. Descripción
+
+##### UD21 - JUnit
+ - ##### Enunciado
+```
+Realizar todos los test de prueba necesarios para tener una cobertura del 100% en
+la clase Geometria.java. Crea para ello un proyecto Maven.
 ```
 
-Este repositorio esta pensando como base para los ejercicios.
-Los ejercicios de cada unidad estan separados por "branch".
 
-Cada ejercicio se guardará en una carpeta distinta, para mayor orden.
-La estructura de las carpetas no esta decidida, pero debería seguir
-la siguiente estructura:
+### 2. Organización del código
+- src
+	- main
+		- java
+			- JUnit
+				- Junit09_Geometria
+					- dto
+						- Geometria.java
+					- App.java
+	- test
+		- java
+			- test
+				- GeometriaTest.java
+				- AppTest.java
 
-	- ejercicioX
-		- Auxiliar
-			- AuxMethod.java
-			- Pair.java
-		- Main
-			- MainApp.java
-		- Models
-			
-
-
-MainApp, será el archivo de inicio.
-AuxMethod y Pair, sirven como clases auxiliares. 
-	- AuxMethod tiene métodos para la interacción con el usuario mediante JOptionPane. 
-	- Pair se trata de una clase abstracta.
-
-```
-
-#### 2. Lista con los pasos mínimos que se necesitan para clonar exitosamente el proyecto y echarlo a andar en local.
+### 3. Clonar y ejecutar
 
 ```
 IDE               Eclipse IDE Java Developers
-Core              Java        
+Core              Java            
 ```
+Para ejecutar los ejercicios debemos arrancar desde "MainApp.java". Cada ejercicio tiene un MainApp independiente
 
 ###### Install
 ```
