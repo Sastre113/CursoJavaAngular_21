@@ -28,14 +28,14 @@ public class VentantaPrincipal extends JFrame implements ActionListener {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private Controller clienteController;
+	private Controller controller;
 	private JPanel contentPane;
 	private JLabel lblTitular;
-	private JButton btnInsertar, btnBuscar, btnMostrarTodo;
+	private JButton btnInsertar, btnBuscar;
 
 	public VentantaPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 580, 159);
+		setBounds(100, 100, 450, 136);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -50,8 +50,8 @@ public class VentantaPrincipal extends JFrame implements ActionListener {
 		lblTitular.setFont(new Font("Tahoma", Font.BOLD, 15));
 		GridBagConstraints gbc_lblTitular = new GridBagConstraints();
 		gbc_lblTitular.insets = new Insets(0, 0, 5, 5);
-		gbc_lblTitular.gridx = 4;
-		gbc_lblTitular.gridy = 1;
+		gbc_lblTitular.gridx = 3;
+		gbc_lblTitular.gridy = 2;
 		contentPane.add(lblTitular, gbc_lblTitular);
 
 		btnInsertar = new JButton("Insertar Cliente");
@@ -60,28 +60,26 @@ public class VentantaPrincipal extends JFrame implements ActionListener {
 		gbc_btnInsertar.gridx = 2;
 		gbc_btnInsertar.gridy = 3;
 		contentPane.add(btnInsertar, gbc_btnInsertar);
+		
+				btnBuscar = new JButton("Buscar Cliente");
+				GridBagConstraints gbc_btnBuscar = new GridBagConstraints();
+				gbc_btnBuscar.insets = new Insets(0, 0, 5, 5);
+				gbc_btnBuscar.gridx = 4;
+				gbc_btnBuscar.gridy = 3;
+				contentPane.add(btnBuscar, gbc_btnBuscar);
+				btnBuscar.addActionListener(this);
+		
+		btnInsertar.addActionListener(this);
+	}
 
-		btnBuscar = new JButton("Buscar Cliente");
-		GridBagConstraints gbc_btnBuscar = new GridBagConstraints();
-		gbc_btnBuscar.insets = new Insets(0, 0, 5, 5);
-		gbc_btnBuscar.gridx = 4;
-		gbc_btnBuscar.gridy = 3;
-		contentPane.add(btnBuscar, gbc_btnBuscar);
-
-		btnMostrarTodo = new JButton("Mostrar Todos");
-		GridBagConstraints gbc_btnMostrarTodo = new GridBagConstraints();
-		gbc_btnMostrarTodo.insets = new Insets(0, 0, 5, 0);
-		gbc_btnMostrarTodo.gridx = 6;
-		gbc_btnMostrarTodo.gridy = 3;
-		contentPane.add(btnMostrarTodo, gbc_btnMostrarTodo);
+	public void setCoordinador(Controller controller) {
+		this.controller = controller;
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == btnInsertar)
-			this.clienteController.mostrarVentanaInsertar();
-		if(e.getSource() == btnBuscar)
-			this.clienteController.mostrarVentanaBuscar();
-		if(e.getSource() == btnMostrarTodo)
-			this.clienteController.mostrarVentanaMostrarTodo();
+		if (e.getSource() == btnInsertar)
+			this.controller.mostrarVentanaInsertar();
+		if (e.getSource() == btnBuscar)
+			this.controller.mostrarVentanaBuscar();
 	}
 }

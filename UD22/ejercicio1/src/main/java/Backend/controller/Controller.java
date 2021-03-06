@@ -15,7 +15,6 @@ public class Controller {
 	
 	private ClienteServ clienteServ;
 	private VentantaPrincipal ventanaPrincipal;
-	private VentanaMostrarTodo ventanaMostrarTodo;
 	private VentanaInsertar ventanaInsertar;
 	private VentanaBuscar ventanaBuscar;
 	
@@ -47,18 +46,7 @@ public class Controller {
 	public void setVentanaPrincipal(VentantaPrincipal ventanaPrincipal) {
 		this.ventanaPrincipal = ventanaPrincipal;
 	}
-	/**
-	 * @return the ventanaMostrarTodo
-	 */
-	public VentanaMostrarTodo getVentanaMostrarTodo() {
-		return ventanaMostrarTodo;
-	}
-	/**
-	 * @param ventanaMostrarTodo the ventanaMostrarTodo to set
-	 */
-	public void setVentanaMostrarTodo(VentanaMostrarTodo ventanaMostrarTodo) {
-		this.ventanaMostrarTodo = ventanaMostrarTodo;
-	}
+
 	/**
 	 * @return the ventanaInsertar
 	 */
@@ -97,10 +85,6 @@ public class Controller {
 		this.ventanaBuscar.setVisible(true);
 	}
 	
-	public void mostrarVentanaMostrarTodo() {
-		this.ventanaMostrarTodo.setVisible(true);
-	}
-
 	/*
 	 * Métodos CRUD
 	 */

@@ -6,12 +6,14 @@ package Backend.model.conexion;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 /**
- * @author Sastr
+ * @author Miguel A. Sastre
  *
  */
 public class Conexion {
@@ -19,7 +21,7 @@ public class Conexion {
 	static String bd = "PatronMVC_Ejercicio1";
 	static String login = "miguel";
 	static String password = "JajaLqZuE6!9";
-	static String url = "jdbc:mysql://192.168.1.50:3306/" + bd + "?useTimezone=true&serverTimezone=UTC";
+	static String url = "jdbc:mysql://192.168.1.50:3306/?useTimezone=true&serverTimezone=UTC";
 
 	Connection conn = null;
 
@@ -32,7 +34,8 @@ public class Conexion {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			// obtenemos la conexion
 			conn = DriverManager.getConnection(url, login, password);
-
+			Statement st = conn.createStatement();
+			st.executeQuery("USE " + bd + ";");
 			if (conn != null) {
 				System.out.print("Conexión a base de datos " + bd + "_SUCCESS at");
 				fecha();

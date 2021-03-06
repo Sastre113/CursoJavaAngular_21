@@ -26,7 +26,7 @@ public class ClienteDao {
 
 		try {
 			Statement st = conex.getConnection().createStatement();
-			String sql = "INSERT INTO cliente VALUES ('" + nuevoCliente.getNombre() + "'," 
+			String sql = "INSERT INTO Cliente VALUES ('"+ "0"  +"',"+ "'" + nuevoCliente.getNombre() + "'," 
 					+ "'" + nuevoCliente.getApellido() + "'," + "'"
 					+ nuevoCliente.getDireccion() + "'," + "'" + nuevoCliente.getDni() + "'," + "'"
 					+ nuevoCliente.getFecha() + "');";
@@ -49,7 +49,7 @@ public class ClienteDao {
 		boolean existe = false;
 
 		try {
-			String sql = "SELECT * FROM cliente where id = ? ";
+			String sql = "SELECT * FROM Cliente where id = ? ";
 			PreparedStatement consulta = conex.getConnection().prepareStatement(sql);
 			consulta.setInt(1, id);
 			ResultSet res = consulta.executeQuery();
