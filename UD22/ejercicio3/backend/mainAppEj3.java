@@ -31,7 +31,8 @@ public class mainAppEj3 {
 	
 
 	public static void main(String[] args) {
-		new mainAppEj3().iniciar();
+		mainAppEj3 miApp = new mainAppEj3();
+		miApp.iniciar();
 	}
 
 	/**
