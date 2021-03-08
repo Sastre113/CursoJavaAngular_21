@@ -1,0 +1,12 @@
+CREATE DATABASE  PatronMVC_Ejercicio1;
+USE PatronMVC_Ejercicio1;
+
+CREATE TABLE Cliente (
+	id INT (11) NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(250) DEFAULT NULL,
+    apellido VARCHAR(250) DEFAULT NULL,
+    direccion VARCHAR(250) DEFAULT NULL,
+    dni INT(11) DEFAULT NULL,
+    fecha VARCHAR(250) DEFAULT NULL,
+    PRIMARY KEY (id)
+);

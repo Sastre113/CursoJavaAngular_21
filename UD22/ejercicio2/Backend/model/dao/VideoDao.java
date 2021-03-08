@@ -25,7 +25,8 @@ public class VideoDao {
 		
 		try {
 			Statement st = conex.getConnection().createStatement();
-			String sql = "INSERT INTO Videos VALUES ('"+ "0"  +"',"+ "'" + nuevoVideo.getTitle() + "'," 
+			String sql = "INSERT INTO Videos VALUES ('"+ "0"  +"',"
+					+ "'" + nuevoVideo.getTitle() + "'," 
 					+ "'" + nuevoVideo.getDirector() + "'," + "'"
 					+ nuevoVideo.getCli_id() + "');";
 			st.executeUpdate(sql);
