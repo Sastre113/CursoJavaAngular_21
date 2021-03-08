@@ -1,47 +1,49 @@
+package Backend.model.service;
+
 /**
  * 
  */
-package Backend.model.service;
 
 import javax.swing.JOptionPane;
 
-import Backend.controller.Controller;
-import Backend.model.dao.ClienteDao;
-import Backend.model.dto.Cliente;
+import Backend.controller.ControllerEj2;
+import Backend.model.dao.ClienteDaoEj2;
+import Backend.model.dto.ClienteDto;
+
 
 /**
  * @author Miguel A. Sastre
  *
  */
-public class ClienteServ {
-	private Controller clienteController;
+public class ClienteService {
+	private ControllerEj2 clienteController;
 	public static boolean consultaCliente = false;
 	public static boolean modificaCliente = false;
 
-	public void setController(Controller clienteController) {
+	public void setController(ControllerEj2 clienteController) {
 		this.setController(clienteController);
 	}
 
-	public void validarRegistro(Cliente nuevoCliente) {
-		ClienteDao cliente;
+	public void validarRegistro(ClienteDto nuevoCliente) {
+		ClienteDaoEj2 cliente;
 
 		if (nuevoCliente.getDni() > Math.pow(10, 6)) {
-			cliente = new ClienteDao();
+			cliente = new ClienteDaoEj2();
 			cliente.registrarCliente(nuevoCliente);
 		} else
 			JOptionPane.showMessageDialog(null, "El documento de la persona debe ser mas de 6 digitos", "Advertencia",
 					JOptionPane.WARNING_MESSAGE);
 	}
 
-	public Cliente validarConsulta(String dni) {
-		ClienteDao clienteDao;
-		Cliente clienteBuscado = null;
+	public ClienteDto validarConsulta(String dni) {
+		ClienteDaoEj2 ClienteDaoEj2;
+		ClienteDto clienteBuscado = null;
 
 		try {
 
-			clienteDao = new ClienteDao();
+			ClienteDaoEj2 = new ClienteDaoEj2();
 			consultaCliente = true;
-			clienteBuscado = clienteDao.buscarCliente(Integer.parseInt(dni));
+			clienteBuscado = ClienteDaoEj2.buscarCliente(Integer.parseInt(dni));
 
 		} catch (NumberFormatException e) {
 			JOptionPane.showMessageDialog(null, "Debe ingresar un dato numerico", "Error", JOptionPane.ERROR_MESSAGE);
@@ -54,10 +56,10 @@ public class ClienteServ {
 		return clienteBuscado;
 	}
 
-	public void validarModificacion(Cliente modCliente) {
-		ClienteDao cliente;
+	public void validarModificacion(ClienteDto modCliente) {
+		ClienteDaoEj2 cliente;
 		if (modCliente.getNombre().length() > 3) {
-			cliente = new ClienteDao();
+			cliente = new ClienteDaoEj2();
 			cliente.modificarCliente(modCliente);
 			modificaCliente = true;
 		} else {
@@ -68,21 +70,21 @@ public class ClienteServ {
 	}
 
 	public void validarEliminacion(String id) {
-		ClienteDao clienteDao = new ClienteDao();
-		clienteDao.eliminarPersona(id);
+		ClienteDaoEj2 ClienteDaoEj2 = new ClienteDaoEj2();
+		ClienteDaoEj2.eliminarPersona(id);
 	}
 
 	/**
 	 * @return the clienteController
 	 */
-	public Controller getClienteController() {
+	public ControllerEj2 getClienteController() {
 		return clienteController;
 	}
 
 	/**
 	 * @param clienteController the clienteController to set
 	 */
-	public void setClienteController(Controller clienteController) {
+	public void setClienteController(ControllerEj2 clienteController) {
 		this.clienteController = clienteController;
 	}
 

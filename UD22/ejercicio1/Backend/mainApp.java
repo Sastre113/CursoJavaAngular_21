@@ -1,13 +1,10 @@
 package Backend;
 
-
-
 import Backend.controller.Controller;
 import Backend.model.service.ClienteServ;
 import Backend.view.VentanaBuscar;
 import Backend.view.VentanaInsertar;
 import Backend.view.VentantaPrincipal;
-
 
 public class mainApp {
 	
@@ -17,9 +14,6 @@ public class mainApp {
 	VentanaInsertar ventanaInsertar;
 	Controller controller;
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		mainApp miPrincipal=new mainApp();
 		miPrincipal.iniciar();
