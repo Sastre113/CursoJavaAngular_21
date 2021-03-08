@@ -11,8 +11,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
-import Backend.controller.Controller;
 import Backend.controller.ControllerEj2;
 
 import javax.swing.border.BevelBorder;
@@ -31,7 +31,7 @@ public class VentPrincipal extends JFrame implements ActionListener {
 	private JButton btnInsertar, btnBuscar, btnBuscarVideo,btnInsertarVideo,btnMostrarTodos;
 
 	public VentPrincipal() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBounds(100, 100, 549, 223);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -88,6 +88,7 @@ public class VentPrincipal extends JFrame implements ActionListener {
 		this.controller = controller;
 	}
 
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnInsertar)
 			this.controller.showVentanaInsertarCliente();

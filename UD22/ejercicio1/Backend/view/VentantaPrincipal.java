@@ -5,6 +5,7 @@ package Backend.view;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
 import Backend.controller.Controller;
@@ -34,7 +35,7 @@ public class VentantaPrincipal extends JFrame implements ActionListener {
 	private JButton btnInsertar, btnBuscar;
 
 	public VentantaPrincipal() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 136);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -46,7 +47,7 @@ public class VentantaPrincipal extends JFrame implements ActionListener {
 		gbl_contentPane.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
 		contentPane.setLayout(gbl_contentPane);
 
-		lblTitular = new JLabel("App control cliente");
+		lblTitular = new JLabel("mainAppEj3 control cliente");
 		lblTitular.setFont(new Font("Tahoma", Font.BOLD, 15));
 		GridBagConstraints gbc_lblTitular = new GridBagConstraints();
 		gbc_lblTitular.insets = new Insets(0, 0, 5, 5);
@@ -76,6 +77,7 @@ public class VentantaPrincipal extends JFrame implements ActionListener {
 		this.controller = controller;
 	}
 
+	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnInsertar)
 			this.controller.mostrarVentanaInsertar();

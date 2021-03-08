@@ -3,8 +3,6 @@
  */
 package Backend.view;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,9 +21,7 @@ import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
 
-import Backend.controller.Controller;
 import Backend.controller.ControllerEj2;
-import Backend.model.dto.ClienteDto;
 import Backend.model.dto.VideoDto;
 
 /**

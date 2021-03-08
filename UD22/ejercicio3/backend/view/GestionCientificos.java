@@ -4,11 +4,12 @@
 package backend.view;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
+
+import backend.controller.Controlador;
 
 /**
  * @author Miguel A. Sastre
@@ -16,10 +17,11 @@ import javax.swing.border.EmptyBorder;
  */
 public class GestionCientificos extends JFrame {
 
+	Controlador controlador;
 	private JPanel contentPane;
 
 	public GestionCientificos() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -27,4 +29,10 @@ public class GestionCientificos extends JFrame {
 		setContentPane(contentPane);
 	}
 
+	/**
+	 * @param controlador the controlador to set
+	 */
+	public void setControlador(Controlador controlador) {
+		this.controlador = controlador;
+	}
 }

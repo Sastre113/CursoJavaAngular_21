@@ -3,7 +3,6 @@
  */
 package Backend.view;
 
-import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,7 +13,6 @@ import javax.swing.border.EmptyBorder;
 import Backend.controller.Controller;
 import Backend.model.dto.Cliente;
 
-import java.awt.GridLayout;
 import java.awt.GridBagLayout;
 import javax.swing.JTextField;
 import java.awt.GridBagConstraints;
