@@ -4,29 +4,7 @@
 
 #### 1. Descripcion
 ```
-
-Este repositorio esta pensando como base para los ejercicios.
-Los ejercicios de cada unidad estan separados por "branch".
-
-Cada ejercicio se guardará en una carpeta distinta, para mayor orden.
-La estructura de las carpetas no esta decidida, pero debería seguir
-la siguiente estructura:
-
-	- ejercicioX
-		- Auxiliar
-			- AuxMethod.java
-			- Pair.java
-		- Main
-			- MainApp.java
-		- Models
-			
-
-
-MainApp, será el archivo de inicio.
-AuxMethod y Pair, sirven como clases auxiliares. 
-	- AuxMethod tiene métodos para la interacción con el usuario mediante JOptionPane. 
-	- Pair se trata de una clase abstracta.
-
+Esta actividad se trata de crear 2 repositorios en Eclipse Spring Tool Suite, uno tipo maven y otro tipo gradle.
 ```
 
 #### 2. Lista con los pasos mínimos que se necesitan para clonar exitosamente el proyecto y echarlo a andar en local.
