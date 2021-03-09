@@ -8,7 +8,7 @@ CREATE TABLE Cientificos(
     PRIMARY KEY (dni)
 ) ENGINE = InnoDB;
 
-CREATE TABLE Proyecto(
+CREATE TABLE Proyectos(
 	id CHAR(4) UNIQUE,
 	nombre VARCHAR(255),
     horas INT,
@@ -26,7 +26,7 @@ CREATE TABLE Asignado_A(
         ON UPDATE CASCADE,
         
 	CONSTRAINT FK_id_Proyecto FOREIGN KEY (FK_id_Proyecto)
-	REFERENCES Proyecto(id)
+	REFERENCES Proyectos(id)
 		ON DELETE CASCADE
         ON UPDATE CASCADE
 ) ENGINE = InnoDB;
