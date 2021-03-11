@@ -46,6 +46,7 @@ public class TrabajadorController {
 		
 		ptTrabajador.setNomApel(trabajador.getNomApel());
 		ptTrabajador.setTrabajo(trabajador.getTrabajo());
+		ptTrabajador.setSalario(trabajador.getSalario());
 		
 		return trabajadorServiceImpl.actualizarTrabajador(ptTrabajador);
 	}
@@ -53,5 +54,11 @@ public class TrabajadorController {
 	@DeleteMapping("/trabajadores/{id}")
 	public void eliminarTrabajador(@PathVariable(name = "id") Integer id) {
 		trabajadorServiceImpl.eliminarTrabajador(id);
+	}
+	
+	//listar Trabajadores por campo trabajo
+	@GetMapping("/trabajadores/trabajo/{trabajo}")
+	public List<Trabajador> listarClienteNombre(@PathVariable(name="trabajo") String trabajo) {
+	    return trabajadorServiceImpl.listarTrabajadoresXTrabajo(trabajo);
 	}
 }

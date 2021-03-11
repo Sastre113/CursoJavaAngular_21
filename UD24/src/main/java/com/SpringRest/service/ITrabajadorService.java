@@ -14,6 +14,9 @@ import com.SpringRest.dto.Trabajador;
  */
 public interface ITrabajadorService {
 	
+	/**
+	 * CRUD estandar
+	 */
 	public List<Trabajador> listarTrabajadores();
 	
 	public Trabajador añadirTrabajador(Trabajador trabajador);
@@ -23,4 +26,11 @@ public interface ITrabajadorService {
 	public Trabajador actualizarTrabajador(Trabajador trabajador);
 	
 	public void eliminarTrabajador(Integer id);
+	
+	/**
+	 * Métodos adicionales
+	 */
+	
+	public List<Trabajador> listarTrabajadoresXTrabajo(String trabajo);
+	
 }
