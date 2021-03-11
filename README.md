@@ -33,7 +33,8 @@ AuxMethod y Pair, sirven como clases auxiliares.
 
 ```
 IDE               Eclipse IDE Java Developers
-Core              Java        
+Core              Java     
+Build Project 	  Maven
 ```
 
 ###### Install
