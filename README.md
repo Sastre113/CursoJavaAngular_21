@@ -114,9 +114,9 @@ sobre la siguiente base de datos
 ### 3. Clonar y ejecutar
 
 ```
-IDE       Eclipse IDE Java EE Developers
-Core      Java            
-JRE       1.8
+IDE         Eclipse IDE Java EE Developers
+Core        Java            
+JRE         1.8
 Builder 	Maven
 ```
 
