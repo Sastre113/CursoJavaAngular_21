@@ -14,6 +14,8 @@ la clase Geometria.java. Crea para ello un proyecto Maven.
 
 
 ### 2. Organización del código
+- README.md
+- pom.xml
 - src
 	- main
 		- java
@@ -31,12 +33,13 @@ la clase Geometria.java. Crea para ello un proyecto Maven.
 ### 3. Clonar y ejecutar
 
 ```
-IDE               Eclipse IDE Java Developers
-Core              Java            
+IDE		Eclipse IDE Java EE Developers
+Core		Java            
+JRE		1.8
+Builder 	Maven
 ```
-Para ejecutar los ejercicios debemos arrancar desde "MainApp.java". Cada ejercicio tiene un MainApp independiente
 
 ###### Install
 ```
-Eclipse    https://www.eclipse.org/downloads/packages/
+Eclipse    	https://www.eclipse.org/downloads/packages/
 ```
