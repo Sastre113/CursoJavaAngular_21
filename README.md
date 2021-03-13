@@ -10,7 +10,7 @@ Esta actividad se trata de crear 2 repositorios en Eclipse Spring Tool Suite, un
 #### 2. Lista con los pasos mínimos que se necesitan para clonar exitosamente el proyecto y echarlo a andar en local.
 
 ```
-IDE               Eclipse IDE Java Developers
+IDE               Eclipse Spring Tool Suite 4
 Core              Java        
 ```
 
