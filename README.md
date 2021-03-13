@@ -85,46 +85,50 @@ erróneo, evitando que la aplicación se detenga.
 
 
 ### 2. Organización del código
-- ejercicio1
-	- main
-		- Ejercicio1App.java
-	- views
-		- InterfazBasica.java
-- ejercicio2
-	- main
-		- Ejercicio2App.java
-	- views
-		- VentanaConInteraccion.java
-- ejercicio3
-	- main
-		- Ejercicio3App.java
-	- views
-		- VentanaConMasInteraccion.java
-- ejercicio4
-	- main
-		- Ejercicio4App.java
-	- views
-		- VentanaOyente.java
-- ejercicio5
-  	- main
-		- Ejercicio5App.java
-	- views
-		- VentanaConRatonOyente.java
-- ejercicio6
-	- main
-		- Ejercicio6App.java
-	- views
-		- IndiceMasaCorporal.java
-- ejercicio7
- 	- main
- 		- Ejercicio7App.java
-	- views
-		- CalculadoraCambioMoneda.java
-- ejercicio8 
-  	- main
-		- Ejercicio8App.java
-	- views
-		- CalcularCambioMonedaAvanzado.java
+- Readme.md
+- UD20 - MAVEN.pdf
+- ejerciciosUD20
+	- pom.xml
+	- ejercicio1
+		- main
+			- Ejercicio1App.java
+		- views
+			- InterfazBasica.java
+	- ejercicio2
+		- main
+			- Ejercicio2App.java
+		- views
+			- VentanaConInteraccion.java
+	- ejercicio3
+		- main
+			- Ejercicio3App.java
+		- views
+			- VentanaConMasInteraccion.java
+	- ejercicio4
+		- main
+			- Ejercicio4App.java
+		- views
+			- VentanaOyente.java
+	- ejercicio5
+		- main
+			- Ejercicio5App.java
+		- views
+			- VentanaConRatonOyente.java
+	- ejercicio6
+		- main
+			- Ejercicio6App.java
+		- views
+			- IndiceMasaCorporal.java
+	- ejercicio7
+		- main
+			- Ejercicio7App.java
+		- views
+			- CalculadoraCambioMoneda.java
+	- ejercicio8 
+		- main
+			- Ejercicio8App.java
+		- views
+			- CalcularCambioMonedaAvanzado.java
 
 
 ### 3. Clonar y ejecutar
