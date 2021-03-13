@@ -5,7 +5,7 @@
 
 ### 1. Descripción
 
-##### UD19 - SWING/AWT
+##### UD20 - MAVEN
  - ##### Ejercicio 1
 ```java
 Intenta escribir una aplicación con interfaz gráfica en la que se construya una
