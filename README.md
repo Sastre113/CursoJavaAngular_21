@@ -130,12 +130,15 @@ erróneo, evitando que la aplicación se detenga.
 ### 3. Clonar y ejecutar
 
 ```
-IDE               Eclipse IDE Java Developers
-Core              Java            
+IDE		Eclipse IDE Java EE Developers
+Core		Java            
+JRE		1.8
+Builder 	Maven
 ```
-Para ejecutar los ejercicios debemos arrancar desde "MainApp.java". Cada ejercicio tiene un MainApp independiente
+Para ejecutar los ejercicios debemos arrancar desde "EjercicioXApp.java".
 
 ###### Install
 ```
-Eclipse    https://www.eclipse.org/downloads/packages/
+Eclipse    	https://www.eclipse.org/downloads/packages/
+WindowBuilder 	https://www.eclipse.org/windowbuilder/download.php
 ```
