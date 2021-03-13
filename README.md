@@ -72,7 +72,7 @@ NOTAS:
 IDE         Eclipse Spring Tool Suite 4
 Core        Java            
 JRE         1.8
-Builder 	  Maven
+Builder     Maven
 DB          H2
 ```
 
