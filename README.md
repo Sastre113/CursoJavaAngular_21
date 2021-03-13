@@ -106,22 +106,22 @@ erróneo, evitando que la aplicación se detenga.
 	- views
 		- VentanaOyente.java
 - ejercicio5
-  - main
+  	- main
 		- Ejercicio5App.java
 	- views
 		- VentanaConRatonOyente.java
 - ejercicio6
-  - main
+	- main
 		- Ejercicio6App.java
 	- views
 		- IndiceMasaCorporal.java
 - ejercicio7
- - main
-		- Ejercicio7App.java
+ 	- main
+ 		- Ejercicio7App.java
 	- views
 		- CalculadoraCambioMoneda.java
 - ejercicio8 
-  - main
+  	- main
 		- Ejercicio8App.java
 	- views
 		- CalcularCambioMonedaAvanzado.java
