@@ -17,6 +17,10 @@ CONCEPTOS A INVESTIGAR:
 ● RCP (webservice)
 ``` 
 
+```
+La carpeta "Postman" contiene capturas de la actividad donde se valida el CRUD de la API
+```
+
  - ##### Ejercicio 1
 ```java
 Crearemos un programa de gestión de empleados muy sencillo donde dependiendo del
@@ -31,8 +35,6 @@ NOTAS:
   3. Las peticiones de frontal se realizará con POSTMAN.
   4. Finalmente crea una petición especial que busque empleados por trabajo.
 ```
-![Captura](https://user-images.githubusercontent.com/22893383/111039766-05785180-8430-11eb-9178-2a7490d96fd2.PNG)
-
 
 ### 2. Organización del código
 - README.md
@@ -57,7 +59,7 @@ NOTAS:
       - ServLetInitializer.java
       - Ud24Application.java
       - controller
-        - TrabajadorController.java
+          - TrabajadorController.java
       - dao
           - ITrabajadorDao.java
       - dto
