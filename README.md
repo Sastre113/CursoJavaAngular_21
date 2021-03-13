@@ -117,7 +117,7 @@ sobre la siguiente base de datos
 IDE         Eclipse IDE Java EE Developers
 Core        Java            
 JRE         1.8
-Builder 	Maven
+Builder 	  Maven
 ```
 
 ###### Install
