@@ -27,7 +27,7 @@ public class CajaController {
 	}
 
 	@PostMapping("/cajas")
-	public Caja añadirCajas(Caja caja) {
+	public Caja añadirCajas(@RequestBody Caja caja) {
 		return cajaServiceImpl.añadirCajas(caja);
 	}
 
