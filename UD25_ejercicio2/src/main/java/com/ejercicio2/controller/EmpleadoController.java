@@ -27,7 +27,7 @@ public class EmpleadoController {
 	}
 
 	@PostMapping("/empleados")
-	public Empleado añadirEmpleados(Empleado empleado) {
+	public Empleado añadirEmpleados(@RequestBody Empleado empleado) {
 		return empleadoServiceImpl.añadirEmpleado(empleado);
 	}
 
