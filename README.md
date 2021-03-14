@@ -3,7 +3,7 @@
 
 # Curso Desarrollo FullStack con Java, Angular & SQL
 
-## UD24 - SPRING REST
+## UD25 - SPRING REST (WEB + H2 + JPA + ER)
 
 
 ### 1. Descripción
