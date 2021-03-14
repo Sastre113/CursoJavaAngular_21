@@ -46,7 +46,7 @@ La carpeta "Postman" contiene capturas de la actividad donde se valida el CRUD d
       - dto/
         + _"Clases que definen el modelo de las entidades"_
       - service/
-        + _"Calses que validan los datos para su acceso"_
+        + _"Clases que validan los datos para su acceso"_
     - resources
       - application.properties
       - data.sql
