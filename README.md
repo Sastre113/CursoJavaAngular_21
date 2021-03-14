@@ -3,44 +3,71 @@
 
 # Curso Desarrollo FullStack con Java, Angular & SQL
 
-#### 1. Descripcion
+## UD25 - SPRING REST (WEB + H2 + JPA + ER)
+
+
+### 1. Descripción
 ```
-
-Este repositorio esta pensando como base para los ejercicios.
-Los ejercicios de cada unidad estan separados por "branch".
-
-Cada ejercicio se guardará en una carpeta distinta, para mayor orden.
-La estructura de las carpetas no esta decidida, pero debería seguir
-la siguiente estructura:
-
-	- ejercicioX
-		- Auxiliar
-			- AuxMethod.java
-			- Pair.java
-		- Main
-			- MainApp.java
-		- Models
-			
-
-
-MainApp, será el archivo de inicio.
-AuxMethod y Pair, sirven como clases auxiliares. 
-	- AuxMethod tiene métodos para la interacción con el usuario mediante JOptionPane. 
-	- Pair se trata de una clase abstracta.
+En esta práctica aprenderás a crear peticiones HTTP con un CRUD (Create, Read,
+Update, Delete) al completo con H2 ER.
+``` 
 
 ```
-
-#### 2. Lista con los pasos mínimos que se necesitan para clonar exitosamente el proyecto y echarlo a andar en local.
-
+La carpeta "Postman" contiene capturas de la actividad donde se valida el CRUD de la API
 ```
-IDE               Eclipse IDE Java Developers
-Core              Java     
-Build Project 	  Maven
+
+- #### Ejercicio 1
+ ![Captura](https://user-images.githubusercontent.com/22893383/111053535-e1833300-8464-11eb-931a-0dc41aca8c4e.PNG)
+ 
+- #### Ejercicio 2
+![2](https://user-images.githubusercontent.com/22893383/111053536-e2b46000-8464-11eb-9d79-4ddd78f38c45.PNG)
+
+- #### Ejercicio 3
+![3](https://user-images.githubusercontent.com/22893383/111053538-e3e58d00-8464-11eb-821d-2f02ecad25fc.PNG)
+
+- #### Ejercicio 4
+![4](https://user-images.githubusercontent.com/22893383/111053541-e516ba00-8464-11eb-964e-4352bb420c05.PNG)
+
+
+### 2. Organización del código
+***
+- README.md
+- UD25_ejercicioX
+  - pom.xml
+  - Postman/
+  - src/main/
+    - java/com/ejercicio1/
+      - Ud25Ejercicio1Application.java
+      - ServletInitializer.java
+      - controller/ ``"Clases que definen los endpoint de la API"``
+      - dao/ ``"Clases que definen el acceso a los datos"``
+      - dto/ ``"Clases que definen el modelo de las entidades"``
+      - service/ ``"Clases que validan los datos para su acceso"``
+    - resources
+      - application.properties
+      - data.sql
+
+
+### 3. Clonar y ejecutar
+***
+```
+IDE         Eclipse Spring Tool Suite 4
+Core        Java            
+JRE         1.8
+Builder     Maven
+DB          H2
 ```
 
 ###### Install
 ```
-Eclipse    https://www.eclipse.org/downloads/packages/
+Spring Tools 4        https://spring.io/tools
 ```
 
+### 4. Dependencias
+***
+
+- H2 Database
+- Spring Data JPA
+- Spring Web
+- Spring Boot DevTools
 ***
