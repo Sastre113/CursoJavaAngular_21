@@ -3,13 +3,13 @@
 
 # Curso Desarrollo FullStack con Java, Angular & SQL
 
-## UD25 - SPRING REST (WEB + H2 + JPA + ER)
+## UD26 - SPRING REST (WEB + MYSQL + JPA + ER)
 
 
 ### 1. Descripción
 ```
-En esta práctica aprenderás a crear peticiones HTTP con un CRUD (Create, Read,
-Update, Delete) al completo con H2 ER.
+En esta práctica aprenderás a crear peticiones HTTP con un CRUD 
+(Create, Read, Update, Delete) al completo con MySQL ER (n/n).
 ``` 
 
 ```
@@ -17,27 +17,27 @@ La carpeta "Postman" contiene capturas de la actividad donde se valida el CRUD d
 ```
 
 - #### Ejercicio 1
- ![Captura](https://user-images.githubusercontent.com/22893383/111053535-e1833300-8464-11eb-931a-0dc41aca8c4e.PNG)
- 
+![1](https://user-images.githubusercontent.com/22893383/111074372-e5559a80-84e2-11eb-809b-99b4c02490f3.PNG)
+
 - #### Ejercicio 2
-![2](https://user-images.githubusercontent.com/22893383/111053536-e2b46000-8464-11eb-9d79-4ddd78f38c45.PNG)
+![2](https://user-images.githubusercontent.com/22893383/111074374-e5ee3100-84e2-11eb-9e49-302ac61794dd.PNG)
 
 - #### Ejercicio 3
-![3](https://user-images.githubusercontent.com/22893383/111053538-e3e58d00-8464-11eb-821d-2f02ecad25fc.PNG)
+![3](https://user-images.githubusercontent.com/22893383/111074377-e686c780-84e2-11eb-8393-d431a7bef0be.PNG)
 
 - #### Ejercicio 4
-![4](https://user-images.githubusercontent.com/22893383/111053541-e516ba00-8464-11eb-964e-4352bb420c05.PNG)
+![4](https://user-images.githubusercontent.com/22893383/111074378-e71f5e00-84e2-11eb-9f89-b63053ea563f.PNG)
 
 
 ### 2. Organización del código
 ***
 - README.md
-- UD25_ejercicioX
+- UD26_ejercicioX
   - pom.xml
   - Postman/
   - src/main/
-    - java/com/ejercicio1/
-      - Ud25Ejercicio1Application.java
+    - java/com/ejercicioX/
+      - Ud26EjercicioXApplication.java
       - ServletInitializer.java
       - controller/ ``"Clases que definen los endpoint de la API"``
       - dao/ ``"Clases que definen el acceso a los datos"``
@@ -45,7 +45,8 @@ La carpeta "Postman" contiene capturas de la actividad donde se valida el CRUD d
       - service/ ``"Clases que validan los datos para su acceso"``
     - resources
       - application.properties
-      - data.sql
+      - data.sql ``"Archivo sql que ha servido de base para crear la BD"``
+      - dataExport.sql ``"Archivo sql exportado de la BD"``
 
 
 ### 3. Clonar y ejecutar
@@ -55,19 +56,21 @@ IDE         Eclipse Spring Tool Suite 4
 Core        Java            
 JRE         1.8
 Builder     Maven
-DB          H2
+DB          MySQL
 ```
 
 ###### Install
 ```
 Spring Tools 4        https://spring.io/tools
+MySQL Workbench 8.0   https://www.mysql.com/products/workbench/       
 ```
 
 ### 4. Dependencias
 ***
 
-- H2 Database
+- MySQL Driver
 - Spring Data JPA
 - Spring Web
 - Spring Boot DevTools
+
 ***
