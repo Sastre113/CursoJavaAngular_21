@@ -39,14 +39,10 @@ La carpeta "Postman" contiene capturas de la actividad donde se valida el CRUD d
     - java/com/ejercicio1/
       - Ud25Ejercicio1Application.java
       - ServletInitializer.java
-      - controller/
-        + _"Clases que definen los endpoint de la API"_
-      - dao/
-        + _"Clases que definen el acceso a los datos"_
-      - dto/
-        + _"Clases que definen el modelo de las entidades"_
-      - service/
-        + _"Clases que validan los datos para su acceso"_
+      - controller/ ``"Clases que definen los endpoint de la API"``
+      - dao/ ``"Clases que definen el acceso a los datos"``
+      - dto/ ``"Clases que definen el modelo de las entidades"``
+      - service/ ``"Clases que validan los datos para su acceso"``
     - resources
       - application.properties
       - data.sql
