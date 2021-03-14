@@ -27,7 +27,7 @@ public class ArticuloController {
 	}
 
 	@PostMapping("/articulos")
-	public Articulo añadirArticulos(Articulo articulo) {
+	public Articulo añadirArticulos(@RequestBody Articulo articulo) {
 		return articuloServiceImpl.añadirArticulos(articulo);
 	}
 
