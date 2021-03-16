@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: #fab92d;
+}
+
+header h1 {
+  color: #5e5e5e;
+  font-weight: bold;
+}
+
+/* Body */
+body {
+  background-color: rgba(248, 222, 172, 0.74);
+  height: 100%;
+}
+
+body .caja .contenido {
+  margin: 10px;
+}
+
+body .caja .contenido h2 {
+  color: #178bce;
+  font-style: italic;
+}
+
+body .caja .contenido .secciones section {
+  margin-bottom: 20px;
+}
+
+body .caja .contenido .secciones #datos .atributo {
+  color: #36647e;
+  font-style: italic;
+  font-size: 16px;
+}
+
+body .caja .contenido .secciones #preparacion div {
+  margin-bottom: 10px;
+}
+
+body .caja .contenido .secciones #preparacion div ul {
+  margin-top: 5px;
+  margin-left: 15px;
+  list-style: none;
+}
+
+body .caja .contenido .secciones #preparacion h3 {
+  color: #178bce;
+}
+
+/* Footer*/

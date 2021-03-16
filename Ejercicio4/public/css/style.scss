@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+    background-color: rgb(250, 185, 45);
+
+    h1 {
+        color: rgb(94, 94, 94);
+        font-weight: bold;
+    }
+}
+
+/* Body */
+body{
+    background-color: rgba(248, 222, 172, 0.74);
+    height: 100%;
+    .caja {
+    
+        .contenido {
+            margin: 10px;
+            h2 {
+                color: rgb(23, 139, 206);
+                font-style: italic;
+            }
+    
+            .secciones {
+                section{
+                    margin-bottom: 20px;
+                }
+                #datos {
+                    .atributo {
+                        color: rgb(54, 100, 126);
+                        font-style: italic;
+                        font-size: 16px;
+                    }
+                }
+    
+                #preparacion{
+                    div{
+                        margin-bottom: 10px;
+    
+                        ul{
+                            margin-top: 5px;
+                            margin-left: 15px;
+                            list-style: none;
+                        }
+                    }
+                    h3{
+                        color:rgb(23, 139, 206)
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+/* Footer*/

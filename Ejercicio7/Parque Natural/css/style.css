@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Lucida Sans Unicode;
+}
+
+body {
+  padding: 10px;
+  background-color: grey;
+}
+
+body .caja {
+  height: 100vh;
+  overflow: auto;
+  background-color: white;
+}
+
+body .caja header h1 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+body .caja header h1 #parque {
+  color: green;
+}
+
+body .caja header h1 #lugar {
+  color: orange;
+}
+
+body .caja nav {
+  margin-left: 80px;
+}
+
+body .caja .main .main-contenido {
+  border-style: solid;
+  border-color: rgba(155, 155, 155, 0.473);
+  border-width: 2px;
+  margin: 20px 30px;
+}
+
+body .caja .main .main-contenido .main-titular {
+  color: #70AF0A;
+  margin-bottom: 5px;
+  margin-top: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-bottom: #CFDFB5 1px solid;
+}
+
+body .caja .main .main-contenido section {
+  margin-left: 25px;
+  max-width: 95%;
+  text-align: left;
+}
+
+body .caja .main .main-contenido section p {
+  margin-bottom: 20px;
+}
+
+body .caja .main .main-contenido section .animal .nombreAnimal {
+  color: orange;
+}
