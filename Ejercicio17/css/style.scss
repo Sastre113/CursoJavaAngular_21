@@ -1,0 +1,68 @@
+body {
+    main {
+        table {
+            
+            text-align: center;
+            border-spacing: 40px;
+            background-image: url(../img/ac.jpg);
+            td { 
+                border: thin solid;
+                width: 200px;
+                height: 200px;
+            }
+            #A {
+                background-image: url(../img/back_mantel.jpg);
+            }
+            #B {
+                background-image: url(../img/back_mantel.jpg);
+                background-clip: content-box;
+            }
+            #C {
+                background-image: url(../img/back_mantel.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            #D {
+                background-image: url(../img/back_mantel.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-origin: content-box;
+            }
+            #E {
+                background-image: url(../img/dh.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #F {
+                background-image: url(../img/dh.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-origin: content-box;
+            }
+            #G {
+                background-image: url(../img/dh_2.jpg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+            #H {
+                background-image: url(../img/dh_3.jpg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+            #I {
+                background: linear-gradient(90deg,rgb(78, 231, 78),green)
+            }
+            #J {
+                background: linear-gradient(180deg,white,rgb(128, 73, 0) 80%,white)
+            }
+            #K {
+                background: linear-gradient(180deg,white,green)
+            }
+            #L {
+                background: linear-gradient(180deg,rgba(255, 255, 255, 0),green)
+            }
+        }
+    }
+}

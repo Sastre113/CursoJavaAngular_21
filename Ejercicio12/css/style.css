@@ -1,0 +1,20 @@
+body main table {
+  border: #b2b2b2 1px solid;
+}
+
+body main table td,
+body main table th {
+  border: black 1px solid;
+}
+
+body main table .mismoPrecio {
+  background-color: #ebf7f9;
+}
+
+body main table .ultimaFila {
+  background-color: #a8d0f6;
+}
+
+body main table tr:first-child {
+  background-color: #0377e4;
+}

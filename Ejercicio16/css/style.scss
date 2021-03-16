@@ -1,0 +1,31 @@
+body {
+    main {
+        table {
+            text-align: center;
+            border: #b2b2b2 1px solid;
+
+            td,
+            th {
+                border: black 1px solid;
+                
+            }
+
+            tr{
+                background-color: rgb(240, 198, 121);
+            }
+            #tipoRaza{
+                background-color: yellow;
+            }
+
+            #tipoDatos{
+                background-color: orange;
+            }
+
+            tr:first-child{
+                background-color: #1f8d0a;
+            }
+            
+          
+        }
+    }
+}

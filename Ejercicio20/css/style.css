@@ -1,0 +1,8 @@
+body main table {
+  border: #b2b2b2 1px solid;
+}
+
+body main table td,
+body main table th {
+  border: black 1px solid;
+}

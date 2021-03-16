@@ -1,0 +1,28 @@
+body {
+    main {
+        .container {
+            table {
+                border: #b2b2b2 1px solid;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 18px;
+                td,
+                th {
+                    border: black 1px solid;
+                }
+
+                .mismoPrecio {
+                    background-color: #ebf7f9;
+                }
+                .ultimaFila {
+                    background-color: #a8d0f6;
+                }
+                tr:first-child {
+                    background-color: #0377e4;
+                }
+            }
+        }
+    }
+}
