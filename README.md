@@ -3,44 +3,26 @@
 
 # Curso Desarrollo FullStack con Java, Angular & SQL
 
-#### 1. Descripcion
+## UD27 - HTML/CSS
+
+
+### 1. Descripción
 ```
+Introducción y repaso a HTML y CSS.
+Se trata de resolver 10 ejercicios sobre html y css. Los ejercicios
+estan enunciados en el pdf adjunto en este repositiorio.
+``` 
 
-Este repositorio esta pensando como base para los ejercicios.
-Los ejercicios de cada unidad estan separados por "branch".
-
-Cada ejercicio se guardará en una carpeta distinta, para mayor orden.
-La estructura de las carpetas no esta decidida, pero debería seguir
-la siguiente estructura:
-
-	- ejercicioX
-		- Auxiliar
-			- AuxMethod.java
-			- Pair.java
-		- Main
-			- MainApp.java
-		- Models
-			
-
-
-MainApp, será el archivo de inicio.
-AuxMethod y Pair, sirven como clases auxiliares. 
-	- AuxMethod tiene métodos para la interacción con el usuario mediante JOptionPane. 
-	- Pair se trata de una clase abstracta.
-
+### 2. Clonar y ejecutar
+***
 ```
-
-#### 2. Lista con los pasos mínimos que se necesitan para clonar exitosamente el proyecto y echarlo a andar en local.
-
-```
-IDE               Eclipse IDE Java Developers
-Core              Java     
-Build Project 	  Maven
+Editor      Visual Studio Code
+Core        HTML/CSS            
 ```
 
 ###### Install
 ```
-Eclipse    https://www.eclipse.org/downloads/packages/
+Visual Studio Code	https://code.visualstudio.com/       
 ```
 
 ***
