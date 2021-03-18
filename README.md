@@ -3,42 +3,26 @@
 
 # Curso Desarrollo FullStack con Java, Angular & SQL
 
-#### 1. Descripcion
-```
-Este repositorio esta pensando como base para los ejercicios.
-Los ejercicios de cada unidad estan separados por "branch".
+## UD30 - JQuery
 
-Cada ejercicio se guardará en una carpeta distinta, para mayor orden.
-```
 
-#### 2. IDE y Editores usados
-
+### 1. Descripción
 ```
-Eclipse Java Enterprise		https://www.eclipse.org/downloads/packages/
-Spring Tool Suite 4		https://spring.io/tools
-Visual Studio Code		https://code.visualstudio.com/ 
-MySQL Workbench			https://www.mysql.com/products/workbench/
-```
+Introducción a JQuery.
+Se trata de aplicar JQuery al ejercicio de la calculadora.
+``` 
 
-#### 3. Lenguajes usados
-
+### 2. Clonar y ejecutar
+***
 ```
-Java
-SQL
-HTML/CSS
-Javascript
-Typescript
+Editor      Visual Studio Code
+Core        Javascript           
 ```
 
-#### 4. Tecnologías
-
+###### Install
 ```
-Spring
-JPA
-Hibernate
-Maven
-H2
+Visual Studio Code	https://code.visualstudio.com/       
 ```
-
 
 ***
+
