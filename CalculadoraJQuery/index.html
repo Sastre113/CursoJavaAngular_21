@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <noscript>
+        <h1>Esta pagina requiere JS</h1>
+    </noscript>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div id="calculadora">
+            <p id="pantalla">0</p>
+            <div id="botones">
+                <p>
+                    <input type="button" value="Retr">
+                    <input type="button" value="CE">
+                    <input type="button" value="C">
+                </p>
+                <p>
+                    <input type="button" value="7">
+                    <input type="button" value="8">
+                    <input type="button" value="9">
+                    <input type="button" value="/">
+                    <input type="button" value="Raiz">
+                </p>
+                <p>
+                    <input type="button" value="4">
+                    <input type="button" value="5">
+                    <input type="button" value="6">
+                    <input type="button" value="*">
+                    <input type="button" value="%">
+                </p>
+                <p>
+                    <input type="button" value="1">
+                    <input type="button" value="2">
+                    <input type="button" value="3">
+                    <input type="button" value="-">
+                    <input type="button" value="1/x">
+                </p>
+                <p>
+                    <input type="button" value="0">
+                    <input type="button" value="+/-">
+                    <input type="button" value=".">
+                    <input type="button" value="+">
+                    <input type="button" value="=">
+                </p>
+            </div>
+
+        </div>
+        </div>
+    </main>
+</body>
+
+
+<script> 
+    const boton = $('#botones')[0];
+    boton.addEventListener('click', (e) =>{
+        e.preventDefault();
+        calculadora(e.target.value);
+    });
+</script>
+</html>

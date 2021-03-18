@@ -1,0 +1,16 @@
+main #calculadora {
+  background-color: #f89c9c;
+  width: 250px;
+  text-align: center;
+  border: 20px ridge;
+}
+
+main #calculadora #pantalla {
+  background-color: white;
+  width: 175px;
+  margin-left: 15%;
+}
+
+main #calculadora #botones input {
+  width: 35px;
+}
