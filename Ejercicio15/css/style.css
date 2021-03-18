@@ -1,0 +1,22 @@
+main #foto-principal #principal {
+  text-align: center;
+}
+
+main #foto-principal #pieFoto {
+  text-align: center;
+  font-size: 40px;
+}
+
+main #contenedor-miniaturas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main #contenedor-miniaturas #miniaturas {
+  width: 40%;
+}
+
+main #contenedor-miniaturas #miniaturas img {
+  height: 100px;
+}
