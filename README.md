@@ -3,42 +3,26 @@
 
 # Curso Desarrollo FullStack con Java, Angular & SQL
 
-#### 1. Descripcion
-```
-Este repositorio esta pensando como base para los ejercicios.
-Los ejercicios de cada unidad estan separados por "branch".
+## UD27 - Javascript
 
-Cada ejercicio se guardará en una carpeta distinta, para mayor orden.
-```
 
-#### 2. IDE y Editores usados
-
+### 1. Descripción
 ```
-Eclipse Java Enterprise		https://www.eclipse.org/downloads/packages/
-Spring Tool Suite 4		https://spring.io/tools
-Visual Studio Code		https://code.visualstudio.com/ 
-MySQL Workbench			https://www.mysql.com/products/workbench/
-```
+Introducción y repaso a javascript.
+Se trata de resolver 10 ejercicios sobre javascript. Los ejercicios
+estan enunciados en el pdf adjunto en este repositiorio.
+``` 
 
-#### 3. Lenguajes usados
-
+### 2. Clonar y ejecutar
+***
 ```
-Java
-SQL
-HTML/CSS
-Javascript
-Typescript
+Editor      Visual Studio Code
+Core        Javascript           
 ```
 
-#### 4. Tecnologías
-
+###### Install
 ```
-Spring
-JPA
-Hibernate
-Maven
-H2
+Visual Studio Code	https://code.visualstudio.com/       
 ```
-
 
 ***
