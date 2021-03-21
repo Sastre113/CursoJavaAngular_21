@@ -3,42 +3,31 @@
 
 # Curso Desarrollo FullStack con Java, Angular & SQL
 
-#### 1. Descripcion
-```
-Este repositorio esta pensando como base para los ejercicios.
-Los ejercicios de cada unidad estan separados por "branch".
+## UD31 - Bootstrap
 
-Cada ejercicio se guardará en una carpeta distinta, para mayor orden.
-```
 
-#### 2. IDE y Editores usados
-
+### 1. Descripción
 ```
-Eclipse Java Enterprise		https://www.eclipse.org/downloads/packages/
-Spring Tool Suite 4		https://spring.io/tools
-Visual Studio Code		https://code.visualstudio.com/ 
-MySQL Workbench			https://www.mysql.com/products/workbench/
-```
+Sobre la API REST Countries realiza una consulta GET válida para cada uno de los end-points anteriores. Utiliza para ello la funcionalidad de AJAX. Se recomienda integrar Bootstrap en la interfaz visual.
+API gratuita REST Countries (https://restcountries.eu/) 
 
-#### 3. Lenguajes usados
+ACLARACIONES:
+• Las consultas a la API deben estar validadas por token.
+• Has de configurar el acceso COSS ORIGIN en el código de la API.
+• El frontal se ha de realizar por medio de AJAX.
+• Integra Bootstrap.
+``` 
 
+### 2. Clonar y ejecutar
+***
 ```
-Java
-SQL
-HTML/CSS
-Javascript
-Typescript
+Editor      Visual Studio Code
+Core        HTML/CSS/Js           
 ```
 
-#### 4. Tecnologías
-
+###### Install
 ```
-Spring
-JPA
-Hibernate
-Maven
-H2
+Visual Studio Code	https://code.visualstudio.com/       
 ```
-
 
 ***
