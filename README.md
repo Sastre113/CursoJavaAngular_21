@@ -3,7 +3,7 @@
 
 # Curso Desarrollo FullStack con Java, Angular & SQL
 
-## UD31 - Bootstrap
+## UD32 - AJAX
 
 
 ### 1. Descripción
