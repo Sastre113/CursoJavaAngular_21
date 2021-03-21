@@ -1,0 +1,23 @@
+body {
+    #buscador {
+        justify-content: center;
+        margin-top: 20px;
+        display: flex;
+        #campo{
+            margin-right: 10px;
+        }
+    }
+
+    #contenedor {
+        display: flex;
+        place-content: center;
+        max-width: 750px;
+        margin: auto;
+        
+        #queryAjax {
+            margin-top: 100px;
+            overflow: auto;
+        }
+    }
+}
+

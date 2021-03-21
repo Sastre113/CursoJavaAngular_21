@@ -1,0 +1,1 @@
+body #buscador{justify-content:center;margin-top:20px;display:flex}body #buscador #campo{margin-right:10px}body #contenedor{display:flex;place-content:center;max-width:750px;margin:auto}body #contenedor #queryAjax{margin-top:100px;overflow:auto}

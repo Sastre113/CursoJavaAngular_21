@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <title>Ajax</title>
+</head>
+
+<body>
+    <ul class="nav nav-tabs opciones" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link" id="getAll" data-toggle="tab" href="" role="tab" aria-controls="home"
+                aria-selected="true">Get All</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="getByName" data-toggle="tab" href="" role="tab" aria-controls="profile"
+                aria-selected="false">Get By Name</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="getByCode" data-toggle="tab" href="" role="tab" aria-controls="contact"
+                aria-selected="false">Get By Code</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="getByCurrency" data-toggle="tab" href="" role="tab" aria-controls="contact"
+                aria-selected="false">Get By Currency</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="getByLanguage" data-toggle="tab" href="" role="tab" aria-controls="contact"
+                aria-selected="false">Get By Language</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="getByCapital" data-toggle="tab" href="" role="tab" aria-controls="contact"
+                aria-selected="false">Get By Capital</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="getByCallingCode" data-toggle="tab" href="" role="tab" aria-controls="contact"
+                aria-selected="false">Get By Calling Code</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="getByRegion" data-toggle="tab" href="" role="tab" aria-controls="contact"
+                aria-selected="false">Get By Region</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="getByRegionBloc" data-toggle="tab" href="" role="tab" aria-controls="contact"
+                aria-selected="false">Get By Region Bloc</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="getByFields" data-toggle="tab" href="" role="tab" aria-controls="contact"
+                aria-selected="false">Get By Fields</a>
+        </li>
+    </ul>
+
+    <div id="buscador">
+        <div class="mb-3" id="campo">
+            <input type="email" class="form-control" id="campoTexto" >
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="campoCheck">
+            <label class="form-check-label" for="flexCheckDefault">
+                Full Text
+            </label>
+        </div>
+    </div>
+
+    <div id="contenedor">
+        <div id="queryAjax">
+            Aqui se muestran las querys!
+        </div>
+    </div>
+</body>
+
+
+<script src="./js/ajax.js">
+
+</script>
+
+</html>
