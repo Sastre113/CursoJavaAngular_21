@@ -1,0 +1,58 @@
+$gris: rgb(201, 201, 201);
+body {
+    header {
+        nav {
+            padding-left: 50px;
+        }
+
+        .cabecera {
+            padding-left: 65px;
+            .titular {
+                
+            }
+
+            .subtitulo {
+                color: $gris;
+            }
+        }
+    }
+
+    main {
+        .contenedor {
+            display: flex;
+            .izquierda {
+                margin: 15px 20px 15px 65px;
+                width: 75%;
+                .articulo{
+                    .articulo-titulo {
+                        h3{
+    
+                        }
+                        .articulo-titulo-fecha {
+                            color: $gris;
+                            a{
+                                
+                            }
+                        }
+                    }
+
+                    .articulo-cuerpo{
+                        margin-top: 10px;
+                    }
+                }   
+                
+                
+            }
+
+            .derecha {
+                margin: 15px -35px 15px 65px;
+                width: 24%;
+
+                .enlaces{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+body header nav {
+  padding-left: 50px;
+}
+
+body header .cabecera {
+  padding-left: 65px;
+}
+
+body header .cabecera .subtitulo {
+  color: #c9c9c9;
+}
+
+body main .contenedor {
+  display: flex;
+}
+
+body main .contenedor .izquierda {
+  margin: 15px 20px 15px 65px;
+  width: 75%;
+}
+
+body main .contenedor .izquierda .articulo .articulo-titulo .articulo-titulo-fecha {
+  color: #c9c9c9;
+}
+
+body main .contenedor .izquierda .articulo .articulo-cuerpo {
+  margin-top: 10px;
+}
+
+body main .contenedor .derecha {
+  margin: 15px -35px 15px 65px;
+  width: 24%;
+}
+
+body main .contenedor .derecha .enlaces {
+  display: flex;
+  flex-direction: column;
+}

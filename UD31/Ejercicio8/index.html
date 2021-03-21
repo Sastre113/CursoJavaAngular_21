@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="./js/script.js"></script>
+    <noscript>
+        <h1>Esta pagina requiere JS</h1>
+    </noscript>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+
+
+        <div class="container calculadora">
+            <div class="row">
+                <div class="col ">
+                    <p id="pantalla">0</p>
+                </div>
+              </div>
+
+            <div id="botones">
+                <div class="row">
+                    <div class="col"><input type="button" value="Retr"></div>
+                    <div class="col"><input type="button" value="CE"></div>
+                    <div class="col"><input type="button" value="C"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col"><input type="button" value="7"></div>
+                    <div class="col"><input type="button" value="8"></div>
+                    <div class="col"><input type="button" value="9"></div>
+                    <div class="col"><input type="button" value="/"></div>
+                    <div class="col"><input type="button" value="Raiz"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col"><input type="button" value="4"></div>
+                    <div class="col"><input type="button" value="5"></div>
+                    <div class="col"><input type="button" value="6"></div>
+                    <div class="col"><input type="button" value="*"></div>
+                    <div class="col"><input type="button" value="%"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col"><input type="button" value="1"></div>
+                    <div class="col"><input type="button" value="2"></div>
+                    <div class="col"><input type="button" value="3"></div>
+                    <div class="col"><input type="button" value="-"></div>
+                    <div class="col"><input type="button" value="1/x"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col"><input type="button" value="0"></div>
+                    <div class="col"><input type="button" value="+/-"></div>
+                    <div class="col"><input type="button" value="."></div>
+                    <div class="col"><input type="button" value="+"></div>
+                    <div class="col"><input type="button" value="="></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+
+<script>
+    const boton = $('#botones')[0];
+    boton.addEventListener('click', (e) => {
+        e.preventDefault();
+        calculadora(e.target.value);
+    });
+</script>
+
+</html>
