@@ -3,42 +3,33 @@
 
 # Curso Desarrollo FullStack con Java, Angular & SQL
 
-#### 1. Descripcion
-```
-Este repositorio esta pensando como base para los ejercicios.
-Los ejercicios de cada unidad estan separados por "branch".
+## UD33 - Angular
 
-Cada ejercicio se guardará en una carpeta distinta, para mayor orden.
-```
 
-#### 2. IDE y Editores usados
-
+### 1. Descripción
 ```
-Eclipse Java Enterprise		https://www.eclipse.org/downloads/packages/
-Spring Tool Suite 4		https://spring.io/tools
-Visual Studio Code		https://code.visualstudio.com/ 
-MySQL Workbench			https://www.mysql.com/products/workbench/
-```
+Tareas a realizar:
+  · Instala todas las herramientas necesaria para desarrollar en Angular. 
+  · Una vez instalado todo debes crear tu primer proyecto Angular.
+Debes adjuntar las URL de los repositorios GIT de cada uno de los ejercicios así como las capturas de pantalla que consideres necesarias.
+``` 
 
-#### 3. Lenguajes usados
+Captura de pantalla con las versiones de node.js, angular y el mi primer proyecto en angular
+![Captura de pantalla 2021-03-22 152700](https://user-images.githubusercontent.com/22893383/112006439-fd9d6900-8b23-11eb-9eed-6c5fcf82db52.png)
 
+
+
+### 2. Clonar y ejecutar
+***
 ```
-Java
-SQL
-HTML/CSS
-Javascript
-Typescript
+Editor      Visual Studio Code
+Core        HTML/CSS/Js   
+Framework   Angular
 ```
 
-#### 4. Tecnologías
-
+###### Install
 ```
-Spring
-JPA
-Hibernate
-Maven
-H2
+Visual Studio Code	https://code.visualstudio.com/       
 ```
-
 
 ***
