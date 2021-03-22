@@ -29,7 +29,7 @@ Framework   Angular
 
 ###### Install
 ```
-Visual Studio Code	https://code.visualstudio.com/    
+Vs Code	            https://code.visualstudio.com/    
 Angular             https://angular.io/start
 Node.Js             https://nodejs.org/es/
 ```
