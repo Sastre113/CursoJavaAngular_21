@@ -26,6 +26,7 @@ MySQL Workbench			https://www.mysql.com/products/workbench/
 Java
 SQL
 HTML/CSS
+SCSS
 Javascript
 Typescript
 ```
@@ -34,10 +35,12 @@ Typescript
 
 ```
 Spring
+Angular
 JPA
 Hibernate
 Maven
 H2
+BootStrap
 ```
 
 
