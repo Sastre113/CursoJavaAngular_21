@@ -25,7 +25,8 @@ MySQL Workbench			https://www.mysql.com/products/workbench/
 ```
 Java
 SQL
-HTML/CSS
+HTML
+CSS
 SCSS
 Javascript
 Typescript
