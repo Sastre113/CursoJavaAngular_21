@@ -14,7 +14,7 @@ Tareas a realizar:
 Debes adjuntar las URL de los repositorios GIT de cada uno de los ejercicios así como las capturas de pantalla que consideres necesarias.
 ``` 
 
-Captura de pantalla con las versiones de node.js, angular y el mi primer proyecto en angular
+Captura de pantalla con las versiones de node.js, angular y mi primer proyecto en angular
 ![Captura de pantalla 2021-03-22 152700](https://user-images.githubusercontent.com/22893383/112006439-fd9d6900-8b23-11eb-9eed-6c5fcf82db52.png)
 
 
