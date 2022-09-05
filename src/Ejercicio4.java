@@ -19,7 +19,7 @@ public class Ejercicio4 {
         if ( num <= 1 ) {
             return 1;
         } else {
-            return num*factorial(num-1);
+            return num*factorialRecursivo(num-1);
         }
    }
 	
